@@ -6,7 +6,7 @@
 //
 
 /// The StarViewModel is going to describe deeply how the item we chose(in this case, the "star") looks like, describing it precisely.
-///
+
 import Foundation
 import SwiftUI
 
