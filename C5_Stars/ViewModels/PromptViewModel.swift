@@ -5,6 +5,8 @@
 //  Created by Pasquale Piserchia on 26/02/25.
 //
 
+///PromptViewModel will have the array of the different prompts, with their names
+
 import Foundation
 import SwiftUI
 
