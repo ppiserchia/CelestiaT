@@ -13,10 +13,22 @@ import SwiftUI
 class Stars: ObservableObject {
     
 //   @Published
+    
+    // These 6 stars 
+    
     var stars: [Star] = [
         Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Therapy"), starStory: "Placeholder"),
+        
         Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Coming out"), starStory: "Placeholder"),
+        
         Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Therapy"), starStory: "Placeholder"),
-    ]
+        
+        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Sexuality"), starStory: "Placeholder"),
+        
+        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Gender Identity"), starStory: "Placeholder"),
+        
+        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Family"), starStory: "Placeholder")
+        
+
 
 }

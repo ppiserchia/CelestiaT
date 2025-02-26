@@ -20,6 +20,18 @@ class Prompt: ObservableObject {
         Prompts(PromptName: "Family"),
         Prompts(PromptName: "Work"),
         Prompts(PromptName: "Friends"),
-        Prompts(PromptName: "Love life")
+        Prompts(PromptName: "Love life"),
+        Prompts(PromptName: "Shopping"),
+        Prompts(PromptName: "Media representation"),
+        Prompts(PromptName: "Clubbing"),
+        Prompts(PromptName: "Trans community"),
+        Prompts(PromptName: "Surgery"),
+        Prompts(PromptName: "Body dysmorphia"),
+        Prompts(PromptName: "ID Change"),
+        Prompts(PromptName: "Religion"),
+        Prompts(PromptName: "Activism"),
+        Prompts(PromptName: "Gender euphoria"),
+        Prompts(PromptName: "Education")
+        
     ]
 }
