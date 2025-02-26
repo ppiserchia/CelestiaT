@@ -28,7 +28,6 @@ class Stars: ObservableObject {
         Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Gender Identity"), starStory: "Placeholder"),
         
         Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Family"), starStory: "Placeholder")
-        
-
-
+]
+    
 }
