@@ -4,6 +4,11 @@
 //
 //  Created by Pasquale Piserchia on 26/02/25.
 //
+
+
+/// The StarModel is going to identify how the star is going to be structured in terms of the properties that compose the star.
+
+
 import Foundation
 
 struct Star: Identifiable {

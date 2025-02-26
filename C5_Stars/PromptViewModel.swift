@@ -14,7 +14,7 @@ class Prompt: ObservableObject {
     var prompts: [Prompts] = [
         Prompts(PromptName: "HR"),
         Prompts(PromptName: "Coming out"),
-        Prompts(PromptName: "Coming out"),
+        Prompts(PromptName: "Therapy"),
         Prompts(PromptName: "Sexuality"),
         Prompts(PromptName: "Gender Identity"),
         Prompts(PromptName: "Family"),
