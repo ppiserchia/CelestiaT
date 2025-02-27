@@ -14,6 +14,6 @@ import Foundation
 struct Star: Identifiable {
     var id = UUID()
     var starName: String
-    var starPrompt: Prompts
+    var starPrompt: Prompt
     var starStory: String
 }

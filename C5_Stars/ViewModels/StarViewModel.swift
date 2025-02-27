@@ -14,20 +14,20 @@ class Stars: ObservableObject {
     
 //   @Published
     
-    // These 6 stars 
+    // These 6 stars represent the 6 stories that we are going to show, for now
     
     var stars: [Star] = [
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Therapy"), starStory: "Placeholder"),
+        Star(starName: "Placeholder", starPrompt: Prompt(PromptName: "Therapy"), starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Coming out"), starStory: "Placeholder"),
+        Star(starName: "Placeholder", starPrompt: Prompt(PromptName: "Coming out"), starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Therapy"), starStory: "Placeholder"),
+        Star(starName: "Placeholder", starPrompt: Prompt(PromptName: "Therapy"), starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Sexuality"), starStory: "Placeholder"),
+        Star(starName: "Placeholder", starPrompt: Prompt(PromptName: "Sexuality"), starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Gender Identity"), starStory: "Placeholder"),
+        Star(starName: "Placeholder", starPrompt: Prompt(PromptName: "Gender Identity"), starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Family"), starStory: "Placeholder")
+        Star(starName: "Placeholder", starPrompt: Prompt(PromptName: "Family"), starStory: "Placeholder")
         
 ]
 
