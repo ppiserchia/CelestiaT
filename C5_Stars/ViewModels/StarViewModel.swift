@@ -29,6 +29,6 @@ class Stars: ObservableObject {
         
         Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Family"), starStory: "Placeholder")
         
-
+]
 
 }
