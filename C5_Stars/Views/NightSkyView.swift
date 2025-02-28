@@ -17,8 +17,17 @@ import SwiftUI
 
 struct NightSkyView: View {
     var body: some View {
-        ScrollView {
-            Text("Hello, World!")           
+        ScrollView([.vertical, .horizontal]) {
+            
+            Image(systemName: "rectangle")
+                .padding(.horizontal)
+            Image(systemName: "rectangle")
+                .padding()
+            Image(systemName: "rectangle")
+                .padding()
+            Image(systemName: "rectangle")
+                .padding()
+
         }
     }
 }
