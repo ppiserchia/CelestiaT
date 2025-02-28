@@ -13,6 +13,7 @@ import Foundation
 struct Star: Identifiable {
     var id = UUID()
     var starName: String
-    var starPrompt: Prompts
+    var starPrompt: Prompt
+    var user: String
     var starStory: String
 }
