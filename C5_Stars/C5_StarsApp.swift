@@ -11,7 +11,7 @@ import SwiftUI
 struct C5_StarsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NightSkyView()
         }
     }
 }
