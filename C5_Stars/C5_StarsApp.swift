@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct C5_StarsApp: App {
+    
+var stars = Stars()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(stars)
         }
     }
 }
