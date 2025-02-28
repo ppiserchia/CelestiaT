@@ -10,30 +10,30 @@
 import Foundation
 import SwiftUI
 
-class Prompt: ObservableObject {
+class PromptViewModel: ObservableObject {
     
 //    @Published
-    var prompts: [Prompts] = [
-        Prompts(PromptName: "HR"),
-        Prompts(PromptName: "Coming out"),
-        Prompts(PromptName: "Therapy"),
-        Prompts(PromptName: "Sexuality"),
-        Prompts(PromptName: "Gender Identity"),
-        Prompts(PromptName: "Family"),
-        Prompts(PromptName: "Work"),
-        Prompts(PromptName: "Friends"),
-        Prompts(PromptName: "Love life"),
-        Prompts(PromptName: "Shopping"),
-        Prompts(PromptName: "Media representation"),
-        Prompts(PromptName: "Clubbing"),
-        Prompts(PromptName: "Trans community"),
-        Prompts(PromptName: "Surgery"),
-        Prompts(PromptName: "Body dysmorphia"),
-        Prompts(PromptName: "ID Change"),
-        Prompts(PromptName: "Religion"),
-        Prompts(PromptName: "Activism"),
-        Prompts(PromptName: "Gender euphoria"),
-        Prompts(PromptName: "Education")
+    var promptArray: [Prompt] = [
+        Prompt(PromptName: "HR"),
+        Prompt(PromptName: "Coming out"),
+        Prompt(PromptName: "Therapy"),
+        Prompt(PromptName: "Sexuality"),
+        Prompt(PromptName: "Gender Identity"),
+        Prompt(PromptName: "Family"),
+        Prompt(PromptName: "Work"),
+        Prompt(PromptName: "Friends"),
+        Prompt(PromptName: "Love life"),
+        Prompt(PromptName: "Shopping"),
+        Prompt(PromptName: "Media representation"),
+        Prompt(PromptName: "Clubbing"),
+        Prompt(PromptName: "Trans community"),
+        Prompt(PromptName: "Surgery"),
+        Prompt(PromptName: "Body dysmorphia"),
+        Prompt(PromptName: "ID Change"),
+        Prompt(PromptName: "Religion"),
+        Prompt(PromptName: "Activism"),
+        Prompt(PromptName: "Gender euphoria"),
+        Prompt(PromptName: "Education")
         
     ]
 }

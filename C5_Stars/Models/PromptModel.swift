@@ -10,7 +10,7 @@
 import Foundation
 import SwiftUI
 
-struct Prompts: Identifiable {
+struct Prompt: Identifiable {
     var id = UUID()
     var PromptName: String
 }

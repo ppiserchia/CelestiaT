@@ -16,18 +16,31 @@ class Stars: ObservableObject {
     
     // These 6 stars 
     
-    var stars: [Star] = [
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Therapy"), starStory: "Placeholder"),
+    var starArray: [Star] = [
+        Star(starName: "Placeholder",
+             starPrompt: Prompt(PromptName: "HR"),
+             user: "User1",
+             starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Coming out"), starStory: "Placeholder"),
+        Star(starName: "Placeholder",
+             starPrompt: Prompt(PromptName: "Coming out"), user: "User2",
+             starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Therapy"), starStory: "Placeholder"),
+        Star(starName: "Placeholder",
+             starPrompt: Prompt(PromptName: "Coming out"), user: "User3",
+             starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Sexuality"), starStory: "Placeholder"),
+        Star(starName: "Placeholder",
+             starPrompt: Prompt(PromptName: "Coming out"), user: "User4",
+             starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Gender Identity"), starStory: "Placeholder"),
+        Star(starName: "Placeholder",
+             starPrompt: Prompt(PromptName: "Coming out"), user: "User5",
+             starStory: "Placeholder"),
         
-        Star(starName: "Placeholder", starPrompt: Prompts(PromptName: "Family"), starStory: "Placeholder")
+        Star(starName: "Placeholder",
+             starPrompt: Prompt(PromptName: "Coming out"), user: "User6",
+             starStory: "Placeholder")
 ]
     
 }
