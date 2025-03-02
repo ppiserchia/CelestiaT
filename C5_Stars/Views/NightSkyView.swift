@@ -12,12 +12,15 @@
 ///     • See your own constellation
 ///
 ///     • Find new constellations
+///
+///     In this ScrollView, we can move the items indicated below anywhere, but they will return at the center.
+///     Our aim is to move the items anywhere, and they don't have to return at the center.
 
 import SwiftUI
 
 struct NightSkyView: View {
     var body: some View {
-        ScrollView([.vertical, .horizontal]) {
+        ScrollView() {
             
             Image(systemName: "rectangle")
                 .padding(.horizontal)

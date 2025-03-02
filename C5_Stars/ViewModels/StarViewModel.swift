@@ -23,23 +23,28 @@ class Stars: ObservableObject {
              starStory: "Placeholder"),
         
         Star(starName: "Placeholder",
-             starPrompt: Prompt(PromptName: "Coming out"), user: "User2",
+             starPrompt: Prompt(PromptName: "Coming out"),
+             user: "User2",
              starStory: "Placeholder"),
         
         Star(starName: "Placeholder",
-             starPrompt: Prompt(PromptName: "Coming out"), user: "User3",
+             starPrompt: Prompt(PromptName: "Therapy"),
+             user: "User3",
              starStory: "Placeholder"),
         
         Star(starName: "Placeholder",
-             starPrompt: Prompt(PromptName: "Coming out"), user: "User4",
+             starPrompt: Prompt(PromptName: "Sexuality"),
+             user: "User4",
              starStory: "Placeholder"),
         
         Star(starName: "Placeholder",
-             starPrompt: Prompt(PromptName: "Coming out"), user: "User5",
+             starPrompt: Prompt(PromptName: "Friends"),
+             user: "User5",
              starStory: "Placeholder"),
         
         Star(starName: "Placeholder",
-             starPrompt: Prompt(PromptName: "Coming out"), user: "User6",
+             starPrompt: Prompt(PromptName: "Education"),
+             user: "User6",
              starStory: "Placeholder")
 ]
     
