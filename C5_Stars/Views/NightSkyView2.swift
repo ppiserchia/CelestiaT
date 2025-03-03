@@ -1,8 +1,8 @@
 //
-//  NightSkyView.swift
+//  NightSkyView2.swift
 //  C5_Stars
 //
-//  Created by Luis Mario Recinos Hernández  on 28/02/25.
+//  Created by Pasquale Piserchia on 03/03/25.
 //
 
 ///This will be the landing view after opening the App, in it, the nightsky will be displayed as a scrollable space where to
@@ -18,7 +18,7 @@
 
 import SwiftUI
 
-struct NightSkyView: View {
+struct NightSkyView2: View {
     
     @State private var location: CGPoint = CGPoint(x: 50, y: 50) // exact location of the "item" in the view
     
@@ -43,30 +43,26 @@ struct NightSkyView: View {
             
             
             
-            
-            
-            // Color or image that are show
+            // Color or image that are shown in the view
             
             ZStack {
-                Color.gray
-                    .ignoresSafeArea()
-//                .resizable()
+                Image("Sky")
+                .resizable()
+                .ignoresSafeArea(edges: .all)
                 .scaledToFill()
-                .frame(width: geometry.size.width * 150, height: geometry.size.height * 150) // we're making the photo larger
+                .frame(width: geometry.size.width * 2, height: geometry.size.height * 2) // we're making the photo larger
                 .offset(x: offset.width, y: offset.height)
                 .gesture(
                     DragGesture()
                         .onChanged { gesture in
-                            var newWidth = lastOffset.width + gesture.translation.width
-                            var newHeight = lastOffset.height + gesture.translation.height
+            var newWidth = lastOffset.width + gesture.translation.width
+            var newHeight = lastOffset.height + gesture.translation.height
 
             // Constrain movement within bounds
-                            newWidth = min(max(newWidth, minX), maxX)
-                         newHeight = min(max(newHeight, minY), maxY)
+                newWidth = min(max(newWidth, minX), maxX)
+                newHeight = min(max(newHeight, minY), maxY)
 
                         offset = CGSize(width: newWidth, height: newHeight)
-                            
-                            
                             
                             
                             offset = CGSize(
@@ -79,24 +75,18 @@ struct NightSkyView: View {
                         }
                 )
                 
-                Text("hey")
         }
+            VStack {
+                Text("hey")
+                Text("hola")
+                
+                
+                
+            }
     }
 }
 }
-//        Image(systemName: "star.fill")
-//            .foregroundStyle(.blue)
-//            .frame(width: 100, height: 100)
-//            .position(location)
-//            .gesture(dragFeature)
-//    
-//    
-//    var dragFeature: some Gesture {
-//        DragGesture()
-//            .onChanged { value in
-//                self.location = value.location
-//            }
-//    }
+
     
     
 
@@ -120,5 +110,5 @@ struct NightSkyView: View {
 
 
 #Preview {
-    NightSkyView()
+    NightSkyView2()
 }
