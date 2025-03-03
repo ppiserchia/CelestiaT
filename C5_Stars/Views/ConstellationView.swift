@@ -37,7 +37,7 @@ struct ConstellationView: View {
                     // Draw circles
                     ForEach(0..<stars.count, id: \.self) { index in
                         Circle()
-                            .fill(randomColor())
+                            .fill(Color.white)
                             .frame(width: 30, height: 30)
                             .position(stars[index])
                     }
@@ -54,10 +54,6 @@ struct ConstellationView: View {
                 y: CGFloat.random(in: 50...(size.height - 50))
             )
         }
-    }
-    
-    private func randomColor() -> Color {
-        [Color.red, Color.green, Color.blue, Color.orange, Color.purple].randomElement()!
     }
 }
 
