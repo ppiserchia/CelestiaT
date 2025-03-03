@@ -28,24 +28,20 @@ struct NightSkyView: View {
    
     var body: some View {
         
+        // Describe the geometric position in the view of each item
+        
         GeometryReader { geometry in
-            
             let screenWidth = geometry.size.width
             let screenHeight = geometry.size.height
-            let imageWidth = screenWidth * 2 // Make image larger than screen
-            let imageHeight = screenHeight * 2
+            let imageWidth = screenWidth * 2 // Make the image larger than screen, in terms of width
+            let imageHeight = screenHeight * 2 // Make the
             let minX = -imageWidth + screenWidth
             let maxX: CGFloat = 0
             let minY = -imageHeight + screenHeight
             let maxY: CGFloat = 0
 
             
-            
-            
-            
-            
-            
-            // Color or image that are show
+            // Color or image that are shown
             
             ZStack {
                 Color.gray
@@ -99,26 +95,7 @@ struct NightSkyView: View {
 //    }
     
     
-
-    
-    
-    
-    
-//    var body: some View {
-//        ScrollView() {
-//            Image(systemName: "rectangle")
-//                .padding(.horizontal)
-//            Image(systemName: "rectangle")
-//                .padding()
-//            Image(systemName: "rectangle")
-//                .padding()
-//            Image(systemName: "rectangle")
-//                .padding()
-//
-//        }
-//    }
-
-
+   
 #Preview {
     NightSkyView()
 }

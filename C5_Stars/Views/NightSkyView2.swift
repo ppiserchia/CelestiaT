@@ -32,82 +32,67 @@ struct NightSkyView2: View {
             
             let screenWidth = geometry.size.width
             let screenHeight = geometry.size.height
-            let imageWidth = screenWidth * 2 // Make image larger than screen
-            let imageHeight = screenHeight * 2
-            let minX = -imageWidth + screenWidth
+            let backgroundWidth = screenWidth * 2 // Make it larger than the screen
+            let backgroundHeight = screenHeight * 2
+            
+            let minX = -backgroundWidth + screenWidth
             let maxX: CGFloat = 0
-            let minY = -imageHeight + screenHeight
+            let minY = -backgroundHeight + screenHeight
             let maxY: CGFloat = 0
-
             
             
             
             
-            // Color or image that are shown in the view
             
-            ZStack {
-                Image("Sky")
-                .resizable()
-                .ignoresSafeArea(edges: .all)
-                .scaledToFill()
-                .frame(width: geometry.size.width * 2, height: geometry.size.height * 2) // we're making the photo larger
+            
+            
+            //
+            //            let screenWidth = geometry.size.width
+            //            let screenHeight = geometry.size.height
+            //            let imageWidth = screenWidth * 2 // Make image larger than screen
+            //            let imageHeight = screenHeight * 2
+            //            let minX = -imageWidth + screenWidth
+            //            let maxX: CGFloat = 0
+            //            let minY = -imageHeight + screenHeight
+            //            let maxY: CGFloat = 0
+            
+            
+            
+            
+            
+            //MARK: Color or image that is shown in the view
+            
+            Color.black
+            //            LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .top, endPoint: .topLeading)
+                .frame(width: backgroundWidth, height: backgroundHeight)
                 .offset(x: offset.width, y: offset.height)
                 .gesture(
                     DragGesture()
                         .onChanged { gesture in
-            var newWidth = lastOffset.width + gesture.translation.width
-            var newHeight = lastOffset.height + gesture.translation.height
-
-            // Constrain movement within bounds
-                newWidth = min(max(newWidth, minX), maxX)
-                newHeight = min(max(newHeight, minY), maxY)
-
-                        offset = CGSize(width: newWidth, height: newHeight)
+                            var newWidth = lastOffset.width + gesture.translation.width
+                            var newHeight = lastOffset.height + gesture.translation.height
                             
+                            newWidth = min(max(newWidth, minX), maxX)
+                            newHeight = min(max(newHeight, minY), maxY)
                             
-                            offset = CGSize(
-                                width: lastOffset.width + gesture.translation.width,
-                                height: lastOffset.height + gesture.translation.height
-                            )
+                            offset = CGSize(width: newWidth, height: newHeight)
                         }
                         .onEnded { _ in
                             lastOffset = offset
                         }
                 )
-                
         }
-            VStack {
-                Text("hey")
-                Text("hola")
-                
-                
-                
-            }
+        .edgesIgnoringSafeArea(.all)
+        
+    VStack {
+            Text("Hello, World!")
+            .foregroundStyle(.white)
+            .font(.largeTitle)
+            .multilineTextAlignment(.center)
+                }
+        
     }
 }
-}
-
-    
-    
-
-    
-    
-    
-    
-//    var body: some View {
-//        ScrollView() {
-//            Image(systemName: "rectangle")
-//                .padding(.horizontal)
-//            Image(systemName: "rectangle")
-//                .padding()
-//            Image(systemName: "rectangle")
-//                .padding()
-//            Image(systemName: "rectangle")
-//                .padding()
-//
-//        }
-//    }
-
 
 #Preview {
     NightSkyView2()
