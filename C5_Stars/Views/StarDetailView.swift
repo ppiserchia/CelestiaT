@@ -4,15 +4,39 @@
 //
 //  Created by Luis Mario Recinos Hernández  on 28/02/25.
 //
+///What is presented whenever the user clicks on a contellation
 
 import SwiftUI
 
 struct StarDetailView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (spacing: 1){
+            Text("Whatever De Whateveris")
+                .foregroundColor(.white)
+                .font(.system(size: 30, weight: .bold))
+            HStack{
+                Text("@Whatever")
+                    .foregroundColor(.white)
+                    .font(.system(size: 15))
+                    .padding(.leading)
+                Spacer()
+            }
+            //-----------------------
+            //Constellation View
+            Text("Constellation frame")
+                .foregroundColor(.white)
+                .frame(width: 350, height: 260)
+            //-----------------------
+            
+        }
+        .frame(width: 370)
     }
 }
 
 #Preview {
-    StarDetailView()
+    ZStack {
+        Color(.black)
+            .ignoresSafeArea()
+        StarDetailView()
+    }
 }
