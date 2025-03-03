@@ -27,6 +27,9 @@ struct StarDetailView: View {
                 .foregroundColor(.white)
                 .frame(width: 350, height: 260)
             //-----------------------
+            Image("paper_rectangle")
+                .resizable()
+            
             
         }
         .frame(width: 370)
