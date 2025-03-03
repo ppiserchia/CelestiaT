@@ -10,36 +10,35 @@ import SwiftUI
 
 struct StarDetailView: View {
     var body: some View {
-        VStack (spacing: 1){
-            Text("Whatever De Whateveris")
-                .foregroundColor(.white)
-                .font(.system(size: 30, weight: .bold))
-            HStack{
-                Text("@Whatever")
+        ZStack{
+            Color(.black)
+                .ignoresSafeArea()
+            VStack (spacing: 1){
+                Text("Whatever De Whateveris")
                     .foregroundColor(.white)
-                    .font(.system(size: 15))
-                    .padding(.leading)
-                Spacer()
+                    .font(.system(size: 30, weight: .bold))
+                HStack{
+                    Text("@Whatever")
+                        .foregroundColor(.white)
+                        .font(.system(size: 15))
+                        .padding(.leading)
+                    Spacer()
+                }
+                //-----------------------
+                //Constellation View
+                ConstellationView()
+                    .frame(width: 350, height: 260)
+                //-----------------------
+                Image("paper_rectangle")
+                    .resizable()
+                
+                
             }
-            //-----------------------
-            //Constellation View
-            Text("Constellation frame")
-                .foregroundColor(.white)
-                .frame(width: 350, height: 260)
-            //-----------------------
-            Image("paper_rectangle")
-                .resizable()
-            
-            
+            .frame(width: 370)
         }
-        .frame(width: 370)
     }
 }
 
 #Preview {
-    ZStack {
-        Color(.black)
-            .ignoresSafeArea()
-        StarDetailView()
-    }
+    StarDetailView()
 }
