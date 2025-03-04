@@ -19,7 +19,7 @@ struct MultipleConstellationView: View {
                 if firstMultipleConstellations.isEmpty {
                     Color.clear
                         .onAppear{
-                            generateMultipleConstellations(in: geometry.size, count: 5) // render 3 constellations
+                            generateMultipleConstellations(in: geometry.size, count: 9) // render 3 constellations
                         }
                 } else {
                     ForEach(0..<firstMultipleConstellations.count, id: \.self) { index in
@@ -33,7 +33,7 @@ struct MultipleConstellationView: View {
     //MARK: - FUNCTIONS
     
     //GENERATE MULTIPLE CONSTELLATIONS
-    private func generateMultipleConstellations(in size: CGSize, count: Int, starCount: Int = 5, minDistance: CGFloat = 40) { //the `minDistance` is arbitrary
+    private func generateMultipleConstellations(in size: CGSize, count: Int, starCount: Int = 6, minDistance: CGFloat = 40) { //the `minDistance` is arbitrary
         var newConstellations: [[CGPoint]] = [] //this array is needed to store the new constellations generated and it will update the array `firstMultipleConstellations`
         
         //To prevent the constellations to overlap let's try to divide the screen into grids
