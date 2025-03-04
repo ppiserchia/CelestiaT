@@ -1,13 +1,13 @@
 //
-//  MultipleConstellationsView.swift
-//  C5_Stars
+//  MultipleConstellationView.swift
+//  CreateAConstellation
 //
-//  Created by Gina Saviano on 04/03/25.
+//  Created by Gina Saviano on 03/03/25.
 //
 
 import SwiftUI
 
-struct MultipleConstellationsView: View {
+struct MultipleConstellationView: View {
     @State private var firstMultipleConstellations: [[CGPoint]] = [] //an empty array of arrays to store multiple constellations
     
     
@@ -80,12 +80,42 @@ struct MultipleConstellationsView: View {
                 
             }
             
-            newConstellations.append(stars)
+            //Use the Nearest Neighbor Algorithm to order stars
+            let orderedStars = findNearestNeighbor(points: stars)
+            
+            newConstellations.append(orderedStars)
         }
         firstMultipleConstellations = newConstellations
     }
     
-    //DRAW THE CONSTELLATIONS
+    //Find the Nearest Neighbor with the Nearest Neighbor Algorithm:
+    ///this algorithm MINIMIZES the possibilities to have an overlapping but it doesn't prevent it.
+    ///this function reorders the given points (stars) by always connecting the nearest unconnected star
+    private func findNearestNeighbor(points: [CGPoint]) -> [CGPoint] {
+        guard points.count > 1 else { return points } //it checks if there are at least two stars, if there is no star, it breaks
+        
+        var orderedStars: [CGPoint] = [] //the final ordered constellation, to one to call in the func `generateMultipleConstellations`
+        var remainingStars = points //this holds stars that are not connected yet
+        var currentPoint = remainingStars.removeFirst() //starts with the first point of the list
+        
+        orderedStars.append(currentPoint) //it appends the currentPoint to the final array
+        
+        while !remainingStars.isEmpty { //as long as there are remaining unconnected stars, the function keep adding them
+            if let nearestIndexPoint = remainingStars.indices.min(by: { i, j in
+                let dist1 = hypot(currentPoint.x - remainingStars[i].x, currentPoint.y - remainingStars[i].y)
+                let dist2 = hypot(currentPoint.x - remainingStars[j].x, currentPoint.y - remainingStars[j].y)
+                return dist1 < dist2 //all this finds the nearest star by computing the Euclidean distance between two points and then
+            }) {
+                //update everything
+                currentPoint = remainingStars.remove(at: nearestIndexPoint)
+                orderedStars.append(currentPoint)
+            }
+        }
+        return orderedStars
+    }
+    
+    
+    //DRAW THE CONSTELLATIONS ensuring no overlapping
     @ViewBuilder
     private func drawTheConstellation( _ stars: [CGPoint]) -> some View {
         Path { path in
@@ -113,5 +143,5 @@ struct MultipleConstellationsView: View {
 
 //MARK: - PREVIEW
 #Preview {
-    MultipleConstellationsView()
+    MultipleConstellationView()
 }
