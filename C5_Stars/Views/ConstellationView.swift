@@ -48,6 +48,12 @@ struct ConstellationView: View {
                                 .position(stars[index])
                         }
                     }
+                    NavigationLink {
+                        StarDetailView()
+                    } label: {
+                        Rectangle()
+                            .opacity(0)
+                    }
                 }
             }
         }
