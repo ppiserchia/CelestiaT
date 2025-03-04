@@ -39,20 +39,20 @@ struct NightSkyView: View {
             let maxX: CGFloat = 0
             let minY = -imageHeight + screenHeight
             let maxY: CGFloat = 0
-
+            
             
             //MARK: image that is shown
             
-         Image("Sky")
+            Image("Sky")
             //  LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .top, endPoint: .topLeading)
-//                    .ignoresSafeArea()
+            //                    .ignoresSafeArea()
                 .resizable()
                 .scaledToFill()
                 .frame(width: geometry.size.width * 3, height: geometry.size.height * 3) // we're making the photo larger
                 .ignoresSafeArea(edges: .all)
             
-//                .frame(width: geometry.size.width * 150, height: geometry.size.height * 150)
-    // this amount of width and height is used for colors, in order to have a large background.
+            //                .frame(width: geometry.size.width * 150, height: geometry.size.height * 150)
+            // this amount of width and height is used for colors, in order to have a large background.
             
                 .offset(x: offset.width, y: offset.height) // the offset amount is calculated based on the var offset declared above.
             
@@ -62,19 +62,22 @@ struct NightSkyView: View {
                         .onChanged { gesture in
                             var newWidth = lastOffset.width + gesture.translation.width
                             var newHeight = lastOffset.height + gesture.translation.height
-
-            // Constrain movement within bounds: with the variables newWidth and newHeight, the image doesn't go outside, displaying a white space
+                            
+                            // Constrain movement within bounds: with the variables newWidth and newHeight, the image doesn't go outside, displaying a white space
                             
                             newWidth = min(max(newWidth, minX), maxX)
-                         newHeight = min(max(newHeight, minY), maxY)
-
-        offset = CGSize(width: newWidth, height: newHeight)
+                            newHeight = min(max(newHeight, minY), maxY)
+                            
+                            offset = CGSize(width: newWidth, height: newHeight)
                         }
                         .onEnded { _ in
                             lastOffset = offset
                         }
                 )
         }
+     
+        
+        
     }
 }
 
