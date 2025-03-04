@@ -40,30 +40,11 @@ struct NightSkyView2: View {
             let minY = -backgroundHeight + screenHeight
             let maxY: CGFloat = 0
             
-            
-            
-            
-            
-            
-            
-            //
-            //            let screenWidth = geometry.size.width
-            //            let screenHeight = geometry.size.height
-            //            let imageWidth = screenWidth * 2 // Make image larger than screen
-            //            let imageHeight = screenHeight * 2
-            //            let minX = -imageWidth + screenWidth
-            //            let maxX: CGFloat = 0
-            //            let minY = -imageHeight + screenHeight
-            //            let maxY: CGFloat = 0
-            
-            
-            
-            
-            
+
             //MARK: Color or image that is shown in the view
             
-            Color.black
-            //            LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .top, endPoint: .topLeading)
+//            Color.black
+            LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom)
                 .frame(width: backgroundWidth, height: backgroundHeight)
                 .offset(x: offset.width, y: offset.height)
                 .gesture(
@@ -86,7 +67,6 @@ struct NightSkyView2: View {
         
     VStack {
             Text("Hello, World!")
-            .foregroundStyle(.white)
             .font(.largeTitle)
             .multilineTextAlignment(.center)
                 }

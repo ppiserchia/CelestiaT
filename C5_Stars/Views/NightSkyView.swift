@@ -28,58 +28,56 @@ struct NightSkyView: View {
    
     var body: some View {
         
-        // Describe the geometric position in the view of each item
+        //MARK: Describe the geometric position in the view of each item
         
         GeometryReader { geometry in
             let screenWidth = geometry.size.width
             let screenHeight = geometry.size.height
-            let imageWidth = screenWidth * 2 // Make the image larger than screen, in terms of width
-            let imageHeight = screenHeight * 2 // Make the
+            let imageWidth = screenWidth * 2
+            let imageHeight = screenHeight * 2
             let minX = -imageWidth + screenWidth
             let maxX: CGFloat = 0
             let minY = -imageHeight + screenHeight
             let maxY: CGFloat = 0
 
             
-            // Color or image that are shown
+            //MARK: image that is shown
             
-            ZStack {
-                Color.gray
-                    .ignoresSafeArea()
-//                .resizable()
+         Image("Sky")
+            //  LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .top, endPoint: .topLeading)
+//                    .ignoresSafeArea()
+                .resizable()
                 .scaledToFill()
-                .frame(width: geometry.size.width * 150, height: geometry.size.height * 150) // we're making the photo larger
-                .offset(x: offset.width, y: offset.height)
+                .frame(width: geometry.size.width * 3, height: geometry.size.height * 3) // we're making the photo larger
+                .ignoresSafeArea(edges: .all)
+            
+//                .frame(width: geometry.size.width * 150, height: geometry.size.height * 150)
+    // this amount of width and height is used for colors, in order to have a large background.
+            
+                .offset(x: offset.width, y: offset.height) // the offset amount is calculated based on the var offset declared above.
+            
+            //MARK: now we're declaring the gesture of moving the background.
                 .gesture(
                     DragGesture()
                         .onChanged { gesture in
                             var newWidth = lastOffset.width + gesture.translation.width
                             var newHeight = lastOffset.height + gesture.translation.height
 
-            // Constrain movement within bounds
+            // Constrain movement within bounds: with the variables newWidth and newHeight, the image doesn't go outside, displaying a white space
+                            
                             newWidth = min(max(newWidth, minX), maxX)
                          newHeight = min(max(newHeight, minY), maxY)
 
-                        offset = CGSize(width: newWidth, height: newHeight)
-                            
-                            
-                            
-                            
-                            offset = CGSize(
-                                width: lastOffset.width + gesture.translation.width,
-                                height: lastOffset.height + gesture.translation.height
-                            )
+        offset = CGSize(width: newWidth, height: newHeight)
                         }
                         .onEnded { _ in
                             lastOffset = offset
                         }
                 )
-                
-                Text("hey")
         }
     }
 }
-}
+
 //        Image(systemName: "star.fill")
 //            .foregroundStyle(.blue)
 //            .frame(width: 100, height: 100)
