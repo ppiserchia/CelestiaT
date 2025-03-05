@@ -49,7 +49,7 @@ struct ConstellationView: View {
                         }
                     }
                     NavigationLink {
-                        StarDetailView()
+                        ConstellationDetailView()
                     } label: {
                         Rectangle()
                             .opacity(0)
