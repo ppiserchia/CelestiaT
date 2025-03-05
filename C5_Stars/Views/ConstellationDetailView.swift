@@ -9,44 +9,37 @@
 import SwiftUI
 
 struct ConstellationDetailView: View {
-    
-//    @EnvironmentObject var starArray: StarViewModel
-//    var star: StarModel  // Receive a specific StarModel object
-    
-    
     var body: some View {
-        ZStack {
-            Color(.black)
-                .ignoresSafeArea()
-            VStack (spacing: 1) {
-                
-                Text("Hello world")
+    ZStack{
+        Color(.black)
+            .ignoresSafeArea()
+        VStack (spacing: 1){
+            Text("Whatever De Whateveris")
+                .foregroundColor(.white)
+                .font(.system(size: 30, weight: .bold))
+            HStack{
+                Text("@Whatever")
                     .foregroundColor(.white)
-                    .font(.system(size: 30, weight: .bold))
-                    HStack{
-                        Text("@Whatever")
-                            .foregroundColor(.white)
-                            .font(.system(size: 15))
-                            .padding(.leading)
-                        Spacer()
-                    }
-                }
-                //-----------------------
-                //Constellation View
-                ConstellationView()
-                    .frame(width: 350, height: 260)
-                //-----------------------
-                Image("paper_rectangle")
-                    .resizable()
-                
-                
+                    .font(.system(size: 15))
+                    .padding(.leading)
+                Spacer()
             }
-            .frame(width: 370)
+            //-----------------------
+            //Constellation View
+            ConstellationView()
+                .frame(width: 350, height: 260)
+            //-----------------------
+            Image("paper_rectangle")
+                .resizable()
+            
+            
         }
+        .frame(width: 370)
     }
+}
+}
 
 
 //#Preview {
 //    ConstellationDetailView()
-//        .environmentObject(StarViewModel())
 //}
