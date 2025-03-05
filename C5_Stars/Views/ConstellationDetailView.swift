@@ -9,20 +9,27 @@
 import SwiftUI
 
 struct ConstellationDetailView: View {
+    
+//    @EnvironmentObject var starArray: StarViewModel
+//    var star: StarModel  // Receive a specific StarModel object
+    
+    
     var body: some View {
-        ZStack{
+        ZStack {
             Color(.black)
                 .ignoresSafeArea()
-            VStack (spacing: 1){
-                Text("Whatever De Whateveris")
+            VStack (spacing: 1) {
+                
+                Text("Hello world")
                     .foregroundColor(.white)
                     .font(.system(size: 30, weight: .bold))
-                HStack{
-                    Text("@Whatever")
-                        .foregroundColor(.white)
-                        .font(.system(size: 15))
-                        .padding(.leading)
-                    Spacer()
+                    HStack{
+                        Text("@Whatever")
+                            .foregroundColor(.white)
+                            .font(.system(size: 15))
+                            .padding(.leading)
+                        Spacer()
+                    }
                 }
                 //-----------------------
                 //Constellation View
@@ -37,8 +44,9 @@ struct ConstellationDetailView: View {
             .frame(width: 370)
         }
     }
-}
 
-#Preview {
-    ConstellationDetailView()
-}
+
+//#Preview {
+//    ConstellationDetailView()
+//        .environmentObject(StarViewModel())
+//}
