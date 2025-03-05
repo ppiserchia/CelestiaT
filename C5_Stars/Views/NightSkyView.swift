@@ -2,7 +2,7 @@
 //  NightSkyView.swift
 //  C5_Stars
 //
-//  Created by Luis Mario Recinos Hernández  on 28/02/25.
+//  Created by Luis Mario Recinos Hernández  on 05/03/25.
 //
 
 ///This will be the landing view after opening the App, in it, the nightsky will be displayed as a scrollable space where to
@@ -20,83 +20,45 @@ import SwiftUI
 
 struct NightSkyView: View {
     
-    @State private var location: CGPoint = CGPoint(x: 50, y: 50) // exact location of the "item" in the view
-    
+    //Changing this variable will change the offset of the center of the sky, allowing the user to navigate through the nightsky
+    //We use CGSize to gain access to x and y coordinates instead of a plain value, in this way, offset will lend itself better to control the positions of the assets inside of the view
     @State private var offset = CGSize.zero
-    @State private var lastOffset = CGSize.zero
+    @State private var scale: CGFloat = 1.0
     
-   
     var body: some View {
-        
-        //MARK: Describe the geometric position in the view of each item
-        
         GeometryReader { geometry in
-            let screenWidth = geometry.size.width
-            let screenHeight = geometry.size.height
-            let imageWidth = screenWidth * 2
-            let imageHeight = screenHeight * 2
-            let minX = -imageWidth + screenWidth
-            let maxX: CGFloat = 0
-            let minY = -imageHeight + screenHeight
-            let maxY: CGFloat = 0
+            ZStack {
+                //On the bottom, we'll have the nightSky background, made from a radial gradient of two hues of black
+                RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
+                    .frame(width: 5000, height: 5000)
+                
+                Text("Ancher")
+                    .foregroundColor(.white)
+                    .font(.system(size: 50, weight: .bold))
+                
+                
+            }
+            .frame(width: geometry.size.width * 2, height: geometry.size.height * 2)
+            .offset(x: offset.width , y: offset.height)
+            //This might be useful to zoom in to the elected constellation
+            .scaleEffect(scale)
+            //Whenever the user scrolls, the offset will be actually modified inside of the code
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        offset.width += value.translation.width/14
+                        offset.height += value.translation.height/14
+                    }
+            )
+            
+            //ConstellationView()
             
             
-            //MARK: image that is shown
             
-            Image("Sky")
-            //  LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .top, endPoint: .topLeading)
-            //                    .ignoresSafeArea()
-                .resizable()
-                .scaledToFill()
-                .frame(width: geometry.size.width * 3, height: geometry.size.height * 3) // we're making the photo larger
-                .ignoresSafeArea(edges: .all)
-            
-            //                .frame(width: geometry.size.width * 150, height: geometry.size.height * 150)
-            // this amount of width and height is used for colors, in order to have a large background.
-            
-                .offset(x: offset.width, y: offset.height) // the offset amount is calculated based on the var offset declared above.
-            
-            //MARK: now we're declaring the gesture of moving the background.
-                .gesture(
-                    DragGesture()
-                        .onChanged { gesture in
-                            var newWidth = lastOffset.width + gesture.translation.width
-                            var newHeight = lastOffset.height + gesture.translation.height
-                            
-                            // Constrain movement within bounds: with the variables newWidth and newHeight, the image doesn't go outside, displaying a white space
-                            
-                            newWidth = min(max(newWidth, minX), maxX)
-                            newHeight = min(max(newHeight, minY), maxY)
-                            
-                            offset = CGSize(width: newWidth, height: newHeight)
-                        }
-                        .onEnded { _ in
-                            lastOffset = offset
-                        }
-                )
         }
-     
-        
-        
     }
 }
 
-//        Image(systemName: "star.fill")
-//            .foregroundStyle(.blue)
-//            .frame(width: 100, height: 100)
-//            .position(location)
-//            .gesture(dragFeature)
-//    
-//    
-//    var dragFeature: some Gesture {
-//        DragGesture()
-//            .onChanged { value in
-//                self.location = value.location
-//            }
-//    }
-    
-    
-   
 #Preview {
     NightSkyView()
 }
