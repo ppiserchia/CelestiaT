@@ -32,9 +32,8 @@ struct NightSkyView: View {
                 RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
                     .frame(width: 5000, height: 5000)
                 
-                Text("Ancher")
-                    .foregroundColor(.white)
-                    .font(.system(size: 50, weight: .bold))
+                ConstellationView()
+                    .frame(width: 500, height: 500)
                 
                 
             }
@@ -50,11 +49,6 @@ struct NightSkyView: View {
                         offset.height += value.translation.height/14
                     }
             )
-            
-            //ConstellationView()
-            
-            
-            
         }
     }
 }
