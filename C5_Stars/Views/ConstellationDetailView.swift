@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct StarDetailView: View {
+struct ConstellationDetailView: View {
     var body: some View {
         ZStack{
             Color(.black)
@@ -40,5 +40,5 @@ struct StarDetailView: View {
 }
 
 #Preview {
-    StarDetailView()
+    ConstellationDetailView()
 }
