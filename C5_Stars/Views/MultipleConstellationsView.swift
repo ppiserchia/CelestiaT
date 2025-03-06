@@ -19,12 +19,20 @@ struct MultipleConstellationView: View {
                 if firstMultipleConstellations.isEmpty {
                     Color.clear
                         .onAppear{
-                            generateMultipleConstellations(in: geometry.size, count: 5) // render 3 constellations
+                            generateMultipleConstellations(in: geometry.size, count: 2) // render 3 constellations
                         }
                 } else {
-                    ForEach(0..<firstMultipleConstellations.count, id: \.self) { index in
+                    ForEach(firstMultipleConstellations.indices, id: \.self) { index in
                         drawTheConstellation(firstMultipleConstellations[index])
+                        
+                        NavigationLink {
+                            StarDetailView()
+                        } label: {
+                            Rectangle()
+                                .opacity(0)
+                        }
                     }
+
                 }
             }
         }
