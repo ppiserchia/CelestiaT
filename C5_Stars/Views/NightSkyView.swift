@@ -22,37 +22,58 @@ struct NightSkyView: View {
     
     //Changing this variable will change the offset of the center of the sky, allowing the user to navigate through the nightsky
     //We use CGSize to gain access to x and y coordinates instead of a plain value, in this way, offset will lend itself better to control the positions of the assets inside of the view
-    @State private var offset = CGSize.zero
     @State private var scale: CGFloat = 1.0
+    @State private var prevScale: CGFloat = 1.0
+    @State private var offset: CGSize = .zero
+    @State private var prevOffset: CGSize = .zero
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                //On the bottom, we'll have the nightSky background, made from a radial gradient of two hues of black
-                RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
-                    .frame(width: 5000, height: 5000)
-                
-                ConstellationView()
-                    .frame(width: 500, height: 500)
-                
+        NavigationStack{
+            ZStack{
+                GeometryReader { geometry in
+                    ZStack {
+                        //On the bottom, we'll have the nightSky background, made from a radial gradient of two hues of black
+                        RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
+                            .frame(width: geometry.size.width * 10, height: geometry.size.height * 10)
+                            .ignoresSafeArea()
+                        
+                        ConstellationView()
+                            .frame(width: 400, height: 500)
+                            .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                        
+                    }
+                    .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Centered initially
+                    .offset(offset) // Apply drag transformation
+                    .scaleEffect(scale) // Apply pinch-to-zoom transformation
+                }
+                .ignoresSafeArea()
+                .gesture(
+                    DragGesture(minimumDistance: 10.0, coordinateSpace: .global)
+                        .onChanged({ value in
+                            self.offset.width = self.prevOffset.width + value.translation.width
+                            self.offset.height = self.prevOffset.height + value.translation.height
+                        })
+                        .onEnded({ value in
+                            self.prevOffset = self.offset                    })
+                )
+                .simultaneousGesture(
+                    MagnifyGesture(minimumScaleDelta: 0)
+                        .onChanged({ value in
+                            self.scale = self.prevScale * value.magnification
+                        })
+                        .onEnded( { value in
+                            self.prevScale = self.scale
+                        })        )
                 
             }
-            .frame(width: geometry.size.width * 2, height: geometry.size.height * 2)
-            .offset(x: offset.width , y: offset.height)
-            //This might be useful to zoom in to the elected constellation
-            .scaleEffect(scale)
-            //Whenever the user scrolls, the offset will be actually modified inside of the code
-            .gesture(
-                DragGesture()
-                    .onChanged { value in
-                        offset.width += value.translation.width/14
-                        offset.height += value.translation.height/14
-                    }
-            )
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            //        .background(.black.opacity(0.8))
+            
         }
     }
 }
-
+ 
+    
 #Preview {
     NightSkyView()
 }

@@ -19,12 +19,21 @@ struct MultipleConstellationView: View {
                 if firstMultipleConstellations.isEmpty {
                     Color.clear
                         .onAppear{
-                            generateMultipleConstellations(in: geometry.size, count: 9) // render 3 constellations
+
+                            generateMultipleConstellations(in: geometry.size, count: 2) // render 3 constellations
                         }
                 } else {
-                    ForEach(0..<firstMultipleConstellations.count, id: \.self) { index in
+                    ForEach(firstMultipleConstellations.indices, id: \.self) { index in
                         drawTheConstellation(firstMultipleConstellations[index])
+                        
+                        NavigationLink {
+                            ConstellationDetailView()
+                        } label: {
+                            Rectangle()
+                                .opacity(0)
+                        }
                     }
+
                 }
             }
         }
@@ -125,7 +134,7 @@ struct MultipleConstellationView: View {
                 path.addLine(to: point)
             }
         }
-        .stroke(Color.white, lineWidth: 1)
+        .stroke(Color.white, lineWidth: 0.5)
         
         // Draw circles
         ForEach(0..<stars.count, id: \.self) { index in

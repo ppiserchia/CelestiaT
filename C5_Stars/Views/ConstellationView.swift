@@ -12,13 +12,7 @@ struct ConstellationView: View {
         GeometryReader { geometry in
             
             NavigationStack{
-                ZStack {
-                    LinearGradient(
-                        colors: [.black.opacity(0.8), .black],
-                        startPoint: .bottom,
-                        endPoint: .top)
-                    .ignoresSafeArea()
-                    
+                ZStack {   
                     if stars.isEmpty {
                         // Generate random stars when the view appears
                         Color.clear
