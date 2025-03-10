@@ -78,3 +78,6 @@ struct NightSkyView: View {
 #Preview {
     NightSkyView()
 }
+
+
+//trying to see if now it works -G.
