@@ -9,14 +9,14 @@ import SwiftUI
 
 struct PromptTitleView: View {
     
-//    @Environment(StarViewModel.self) var starVM
+    @Environment(StarViewModel.self) var starVM
     
     var body: some View {
         ZStack {
             Rectangle()
                 .background(.ultraThinMaterial)
                 .cornerRadius(40)
-            Text("Constellation Title")
+            Text("Placeholder")
                 .font(.system(size: 35, weight: .bold))
                 .foregroundColor(.white)
                 .padding()

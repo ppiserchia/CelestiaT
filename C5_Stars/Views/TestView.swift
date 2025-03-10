@@ -14,11 +14,10 @@ struct TestView: View {
         NavigationStack {
             
             List {
-                ForEach(starsVM.starArray2) { star in
+                ForEach(starsVM.marcoConstellation) { star in
                     
                     NavigationLink {
                         TestView1(star: StarModel(
-                            starName: star.starName,
                             starPrompt: star.starPrompt,
                             user: star.user,
                             starStory: star.starStory)

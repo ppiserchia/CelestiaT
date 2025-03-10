@@ -10,10 +10,10 @@
 
 import Foundation
 
-struct Constellation: Identifiable {
+struct ConstellationModel: Identifiable {
     var id = UUID()
     var constellationName: String
-    var starNumber: Int
     //Empty array of stars
-    var stars = [String]()
+    var stars: [StarModel]
+    var starNumber: Int
 }
