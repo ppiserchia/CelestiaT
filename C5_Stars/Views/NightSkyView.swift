@@ -26,6 +26,7 @@ struct NightSkyView: View {
     @State private var prevScale: CGFloat = 1.0
     @State private var offset: CGSize = .zero
     @State private var prevOffset: CGSize = .zero
+    @State private var isZoomedIn: Bool = false //to control the zoom-in of the constellation
     
     var body: some View {
         NavigationStack{
@@ -40,7 +41,7 @@ struct NightSkyView: View {
                         ConstellationView()
                             .frame(width: 400, height: 500)
                             .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
-                        
+ 
                     }
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Centered initially
                     .offset(offset) // Apply drag transformation
@@ -64,7 +65,7 @@ struct NightSkyView: View {
                         .onEnded( { value in
                             self.prevScale = self.scale
                         })        )
-                
+    
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             //     .background(.black.opacity(0.8))
@@ -72,8 +73,8 @@ struct NightSkyView: View {
         }
     }
 }
- 
-    
+
+
 #Preview {
     NightSkyView()
 }
