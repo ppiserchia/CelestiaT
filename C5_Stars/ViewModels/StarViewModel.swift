@@ -16,7 +16,7 @@ class StarViewModel: ObservableObject {
     
     // These 6 stars 
     
-    var rudyConstellation: [StarModel] = [
+    var starArray1: [StarModel] = [
         StarModel(starName: "",
              starPrompt: Prompt(PromptName: "Coming out"),
              user: "Creative Beaver",
@@ -34,7 +34,7 @@ class StarViewModel: ObservableObject {
         ]
 
     
-    var marcoConstellation: [StarModel] = [
+    var starArray2: [StarModel] = [
         StarModel(starName: "",
              starPrompt: Prompt(PromptName: "Family"),
              user: "Marco",
