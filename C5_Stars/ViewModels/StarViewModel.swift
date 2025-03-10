@@ -9,6 +9,7 @@
 
 import Foundation
 import SwiftUI
+@Observable
 
 class StarViewModel: ObservableObject {
     
