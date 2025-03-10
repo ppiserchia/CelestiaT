@@ -9,7 +9,8 @@ struct ConstellationView: View {
         GeometryReader { geometry in
             
             NavigationStack{
-                ZStack {   
+                ZStack {
+                    
                     if stars.isEmpty {
                         // Generate random stars when the view appears
                         Color.clear
