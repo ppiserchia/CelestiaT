@@ -39,35 +39,33 @@ struct NightSkyView: View {
                             .ignoresSafeArea()
                         
                         ConstellationView()
-                            .frame(width: 500, height: 500)
-                            .offset(
-                                x: isZoomedIn ? 0 : geometry.size.width / 2,
-                                y: isZoomedIn ? 0 : geometry.size.height / 2
-                            )
-                            .scaleEffect(isZoomedIn ? 2.5 : 1.0)
-                            .onTapGesture {
-                                withAnimation(.spring(response: 0.5, dampingFraction: 0.75)) {
-                                    isZoomedIn.toggle()
-                                }
-                            }
+                            .frame(width: 400, height: 500)
+                            .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
+ 
                     }
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Centered initially
-                    .offset(isZoomedIn ? .zero : offset) // Apply drag transformation
+                    .offset(offset) // Apply drag transformation
+                    .scaleEffect(scale) // Apply pinch-to-zoom transformation
                 }
                 .ignoresSafeArea()
                 .gesture(
-                    DragGesture(minimumDistance: 20.0, coordinateSpace: .global)
-                        .onChanged{ value in
-                            if !isZoomedIn {
-                                self.offset.width = self.prevOffset.width + value.translation.width
-                                self.offset.height = self.prevOffset.height + value.translation.height
-                            }
-                            
-                        }
-                        .onEnded({ _ in
+                    DragGesture(minimumDistance: 10.0, coordinateSpace: .global)
+                        .onChanged({ value in
+                            self.offset.width = self.prevOffset.width + value.translation.width
+                            self.offset.height = self.prevOffset.height + value.translation.height
+                        })
+                        .onEnded({ value in
                             self.prevOffset = self.offset                    })
                 )
-
+                .simultaneousGesture(
+                    MagnifyGesture(minimumScaleDelta: 0)
+                        .onChanged({ value in
+                            self.scale = self.prevScale * value.magnification
+                        })
+                        .onEnded( { value in
+                            self.prevScale = self.scale
+                        })        )
+    
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             //        .background(.black.opacity(0.8))

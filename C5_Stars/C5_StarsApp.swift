@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct C5_StarsApp: App {
     
-//var stars = Stars()
+    var stars = StarViewModel() // use = to initialize it
+    
     var body: some Scene {
         WindowGroup {
             NightSkyView()
+                .environmentObject(stars)
         }
     }
 }

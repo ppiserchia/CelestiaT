@@ -10,8 +10,8 @@
 
 import Foundation
 
-struct Star: Identifiable {
-    var id = UUID()
+struct StarModel: Identifiable {
+    let id = UUID()
     var starName: String
     var starPrompt: Prompt
     var user: String

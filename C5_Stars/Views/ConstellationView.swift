@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ConstellationView: View {
+    @State private var selectedStar: StarModel? // Tracks selected star
+    @EnvironmentObject var starsVM: StarViewModel // EnvironmentObject should be the ViewModel
     @State private var stars: [CGPoint] = [] //empty array to store the positions of the stars
     
     var body: some View {
@@ -8,6 +10,7 @@ struct ConstellationView: View {
             
             NavigationStack{
                 ZStack {
+
                     if stars.isEmpty {
                         // Generate random stars when the view appears
                         Color.clear

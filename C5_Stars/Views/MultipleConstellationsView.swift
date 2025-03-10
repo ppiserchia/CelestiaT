@@ -134,7 +134,7 @@ struct MultipleConstellationView: View {
                 path.addLine(to: point)
             }
         }
-        .stroke(Color.white, lineWidth: 1)
+        .stroke(Color.white, lineWidth: 0.5)
         
         // Draw circles
         ForEach(0..<stars.count, id: \.self) { index in
