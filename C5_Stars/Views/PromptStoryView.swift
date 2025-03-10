@@ -11,9 +11,9 @@ struct PromptStoryView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .background(.thinMaterial)
+                .background(.ultraThinMaterial)
                 .cornerRadius(40)
-            Text("Constellation Title")
+            Text("Prompt Story")
                 .font(.system(size: 35, weight: .bold))
                 .foregroundColor(.white)
                 .padding()
@@ -26,5 +26,6 @@ struct PromptStoryView: View {
     ZStack{
         Image("T")
         PromptStoryView()
+            .frame(width: 350, height: 130)
     }
 }
