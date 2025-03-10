@@ -1,6 +1,13 @@
+//
+//  DetailConstellationView.swift
+//  C5_Stars
+//
+//  Created by Gina Saviano on 10/03/25.
+//
+
 import SwiftUI
 
-struct ConstellationView: View {
+struct DetailConstellationView: View {
     @State private var selectedStar: StarModel? // Tracks selected star
     @EnvironmentObject var starsVM: StarViewModel // EnvironmentObject should be the ViewModel
     @State private var stars: [CGPoint] = [] //empty array to store the positions of the stars
@@ -8,6 +15,9 @@ struct ConstellationView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
+                RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
+                    .frame(width: geometry.size.width * 10, height: geometry.size.height * 10)
+                    .ignoresSafeArea()
                 
                 if stars.isEmpty {
                     // Generate random stars when the view appears
@@ -51,7 +61,6 @@ struct ConstellationView: View {
             }
         }
     }
-    
     
     //MARK: - CIRCLES' METHODS
     private func generateConstellation(in size: CGSize) {
@@ -118,21 +127,23 @@ private func drawTheConstellation( _ stars: [CGPoint]) -> some View {
         for point in stars.dropFirst() {
             path.addLine(to: point)
         }
+        
 //        for i in 1..<stars.count {
 //            let previous = stars[i - 1]
 //            let current = stars[i]
-            
-            //Add an offset variable to make the curve more exaggerated
+//            
+//            //Add an offset variable to make the curve more exaggerated
 //            let offset: CGFloat = 30
-            
-            //Draw the mid point in a way that they're kind of dynamic
+//            
+//            //Draw the mid point in a way that they're kind of dynamic
 //            let controlX = (previous.x + current.x) / 2
 //            let controlY = (previous.y + current.y) / 2 + ((i % 2 == 0) ? offset : -offset)
 //            
 //            let controlPoint = CGPoint(x: controlX, y: controlY)
 //            
-//            path.addQuadCurve(to: current, control: controlPoint) }
-            
+//            path.addQuadCurve(to: current, control: controlPoint)
+//            
+//        }
         //Let's calculate the middle points between two stars in order to create the curve
         //            let mid1 = CGPoint(x: (previous.x + current.x) / 2, y: previous.y)
         //            let mid2 = CGPoint(x: (previous.x + current.x) / 2, y: current.y)
@@ -166,9 +177,9 @@ private func drawTheConstellation( _ stars: [CGPoint]) -> some View {
     
 }
 
-// Randomize the frame of the stars to 5 to 25
+// Randomize the frame of the stars to 5 to 30
 private func randomFrame() -> CGFloat {
-    return CGFloat.random(in: 5...25)
+    return CGFloat.random(in: 5...30)
 }
 
 // MARK: - PREVIEW
