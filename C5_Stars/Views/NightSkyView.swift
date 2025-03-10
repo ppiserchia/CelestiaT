@@ -38,7 +38,7 @@ struct NightSkyView: View {
                             .frame(width: geometry.size.width * 10, height: geometry.size.height * 10)
                             .ignoresSafeArea()
                         
-                        ConstellationView()
+                        NightSkyViewWithZoom()
                             .frame(width: 400, height: 500)
                             .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
  
