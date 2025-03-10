@@ -46,7 +46,7 @@ struct NightSkyView: View {
                     .offset(offset) // Apply drag transformation
                     .scaleEffect(scale) // Apply pinch-to-zoom transformation
                 }
-                .ignoresSafeArea()
+               // .ignoresSafeArea()
                 .gesture(
                     DragGesture(minimumDistance: 10.0, coordinateSpace: .global)
                         .onChanged({ value in
@@ -67,7 +67,7 @@ struct NightSkyView: View {
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            //        .background(.black.opacity(0.8))
+            //     .background(.black.opacity(0.8))
             
         }
     }
