@@ -9,11 +9,10 @@
 
 import Foundation
 import SwiftUI
+//To make this file available for other files to see, and use
 @Observable
 
 class StarViewModel: ObservableObject {
-    
-//   @Published
     
     // These 6 stars 
     
