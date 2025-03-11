@@ -27,6 +27,7 @@ struct NightSkyView: View {
     @State private var offset: CGSize = .zero
     @State private var prevOffset: CGSize = .zero
     @State private var isZoomedIn: Bool = false //to control the zoom-in of the constellation
+    @EnvironmentObject var constellationVM: ConstellationViewModel
     
     var body: some View {
         NavigationStack{
@@ -39,17 +40,26 @@ struct NightSkyView: View {
                             .ignoresSafeArea()
                         
                         //where we render the constellations
-                        VStack {
-                            
-                            NightSkyViewWithZoom()
-                                .frame(width: 400, height: 500)
-                                .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
-                         
-                            
-                            NightSkyViewWithZoom()
-                                .frame(width: 400, height: 100
-                                )
+                            //HStack embbeded in a VSTack for getting spacing both horizontal and vertical spacing
+                        VStack(spacing: 50){
+                            HStack(spacing: 50){
+                                ForEach(constellationVM.constellationArray){ constellation in
+                                    NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber)
+                                }
+                                .frame(width: 300, height: 500)
+                            }
                         }
+                            
+                            
+//                            NightSkyViewWithZoom()
+//                                .frame(width: 400, height: 500)
+//                                .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
+//                         
+//                            
+//                            NightSkyViewWithZoom()
+//                                .frame(width: 400, height: 100
+//                                )
+
  
                     }
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Centered initially
@@ -85,7 +95,7 @@ struct NightSkyView: View {
 
 
 #Preview {
-    NightSkyView()
+    NightSkyView().environmentObject(ConstellationViewModel())
 }
 
 

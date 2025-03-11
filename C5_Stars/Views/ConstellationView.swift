@@ -5,6 +5,8 @@ struct ConstellationView: View {
     @EnvironmentObject var starsVM: StarViewModel // EnvironmentObject should be the ViewModel
     @State private var stars: [CGPoint] = [] //empty array to store the positions of the stars
     
+    @State var numberOfStars: Int
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -25,15 +27,15 @@ struct ConstellationView: View {
     
     //MARK: - CIRCLES' METHODS
     private func generateConstellation(in size: CGSize) {
-        stars = generateRandomStars(in: size)
+        stars = generateStars(in: size)
         stars = findNearestNeighbor(points: stars)
     }
     
-    private func generateRandomStars(in size: CGSize) -> [CGPoint] {
+    private func generateStars(in size: CGSize) -> [CGPoint] {
         var generatedStars: [CGPoint] = []
         let minDistance: CGFloat = 40
         
-        while generatedStars.count < 5 { //this is where we decide how many stars
+        while generatedStars.count < numberOfStars { //this is where we decide how many stars
             let newPoint = CGPoint(
                 x: CGFloat.random(in: 50...(size.width - 50)),
                 y: CGFloat.random(in: 50...(size.height - 50))
@@ -109,5 +111,5 @@ private func randomFrame() -> CGFloat {
 
 // MARK: - PREVIEW
 #Preview {
-    ConstellationView()
+    ConstellationView(numberOfStars: 5)
 }
