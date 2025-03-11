@@ -27,13 +27,13 @@ struct NightSkyViewWithZoom: View {
                 //here is the DestinationView
                 DetailConstellationView()
                     .navigationTransition(.zoom(sourceID: "zoomTransition", in: namespace))
-//                    .navigationBarBackButtonHidden(true)
+                //                    .navigationBarBackButtonHidden(true)
             } label: {
                 ZStack{
                     GeometryReader { geometry in
                         ZStack {
                             ConstellationView()
-                                .frame(width: 400, height: 500)               .matchedTransitionSource(id: "zoomTransition", in: namespace)
+                                .frame(width: 400, height: 500)       .matchedTransitionSource(id: "zoomTransition", in: namespace)
                         }
                         
                     }
