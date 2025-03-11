@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//@Environment(ConstellationViewModel.self) var constellationVM
+
 struct PromptStoryView: View {
     var body: some View {
         ZStack {
