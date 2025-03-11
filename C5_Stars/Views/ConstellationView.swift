@@ -24,6 +24,8 @@ struct ConstellationView: View {
         }
     }
     
+    //MARK: - SAVE AND LOAD DATA ABOUT CONSTELLATIONS
+    //CoreData
     
     //MARK: - CIRCLES' METHODS
     private func generateConstellation(in size: CGSize) {
