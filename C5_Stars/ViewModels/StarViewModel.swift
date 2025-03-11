@@ -17,6 +17,7 @@ class StarViewModel: ObservableObject {
     // These 6 stars 
     
     var rudyConstellation: [StarModel] = [
+        
         StarModel(
              starPrompt: Prompt(PromptName: "Coming out"),
              user: "Creative Beaver",

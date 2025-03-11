@@ -12,7 +12,17 @@ import SwiftUI
 
 class ConstellationViewModel: ObservableObject {
     
-    var constellationArray: [ConstellationModel] = [
-        ConstellationModel(constellationName: "Creative Beaver", stars: StarViewModel().rudyConstellation, starNumber: 3)
+    var constellationArray = [
+        ConstellationModel(
+            constellationName: StarViewModel().rudyConstellation[0].user,
+            stars: StarViewModel().rudyConstellation,
+            starNumber: StarViewModel().rudyConstellation.count
+        ),
+        
+        ConstellationModel(
+            constellationName: StarViewModel().marcoConstellation[0].user,
+            stars: StarViewModel().marcoConstellation,
+            starNumber: StarViewModel().marcoConstellation.count
+        )
     ]
 }

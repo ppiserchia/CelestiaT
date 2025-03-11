@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-struct PromptTitleView: View {
+struct ConstellationTitle: View {
     
-    @Environment(StarViewModel.self) var starVM
+    @Environment(ConstellationViewModel.self) var constellationVM
+    
+    var constellationTitle: String
     
     var body: some View {
         ZStack {
             Rectangle()
                 .background(.ultraThinMaterial)
                 .cornerRadius(40)
-            Text("Placeholder")
+            //This recieves a string from the user constellation selection inside of the NightSkyView
+            Text(constellationTitle)
                 .font(.system(size: 35, weight: .bold))
                 .foregroundColor(.white)
                 .padding()
@@ -28,7 +31,7 @@ struct PromptTitleView: View {
 #Preview {
     ZStack{
         Image("T")
-        PromptTitleView()
+        ConstellationTitle(constellationTitle: "Preview Placeholer").environment(ConstellationViewModel())
             .frame(width: 350, height: 130)
     }
 }
