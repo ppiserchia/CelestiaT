@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PromptTitleView: View {
     
-    @Environment(StarViewModel.self) var starVM
+//    @Environment(StarViewModel.self) var starVM
     
     var body: some View {
         ZStack {
