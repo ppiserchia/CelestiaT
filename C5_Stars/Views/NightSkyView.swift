@@ -38,9 +38,18 @@ struct NightSkyView: View {
                             .frame(width: geometry.size.width * 10, height: geometry.size.height * 10)
                             .ignoresSafeArea()
                         
-                        NightSkyViewWithZoom()
-                            .frame(width: 400, height: 500)
-                            .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                        //where we render the constellations
+                        VStack {
+                            
+                            NightSkyViewWithZoom()
+                                .frame(width: 400, height: 500)
+                                .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                         
+                            
+                            NightSkyViewWithZoom()
+                                .frame(width: 400, height: 100
+                                )
+                        }
  
                     }
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Centered initially
@@ -71,7 +80,7 @@ struct NightSkyView: View {
             //     .background(.black.opacity(0.8))
             
         }
-    }
+    } 
 }
 
 

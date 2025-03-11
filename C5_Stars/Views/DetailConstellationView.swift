@@ -26,38 +26,8 @@ struct DetailConstellationView: View {
                             generateConstellation(in: geometry.size)
                         }
                 } else {
-                    //                        // Draw connecting lines
-                    //                        ///PATH is a SwiftUI component that allows to define a custom shape by drawing lines, curves and other graphical element
-                    //                        ///Inside the closures  `{ path in }` we define how this graphical element should be rendered
-                    //                        Path { path in
-                    //                            guard let firstPoint = stars.first else { return }
-                    //                            /// here we are ensuring there's a first point where to draw the line: in this case, the first point is the first star of the array "stars".
-                    //                            /// the `guard let` ensures that there is at least one point, otherwise it exits with `return`
-                    //                            path.move(to: firstPoint) //the "drawing cursor" is moved to the first point we declared before
-                    //                            for point in stars.dropFirst() {
-                    //                                path.addLine(to: point)
-                    //                            }
-                    //                            ///here we are connecting the remaning points: `stars.dropFirst()` is a function that gives back all the elements of the array but the first, so we can iterate on the array and connect all the stars
-                    //                        }
-                    //                        .stroke(Color.white, lineWidth: 3)
-                    
-                    
-                    // Draw circles
-                    //                        ForEach(0..<stars.count, id: \.self) { index in
-                    //                            Circle()
-                    //                                .fill(Color.white)
-                    //                                .frame(width: 30, height: 30)
-                    //                                .position(stars[index])
-                    //                        }
-                    
                     drawTheConstellation(stars)
                 }
-                //                    NavigationLink {
-                //                        ConstellationDetailView()
-                //                    } label: {
-                //                        Rectangle()
-                //                            .opacity(0)
-                //                    }
             }
         }
     }
@@ -127,42 +97,6 @@ private func drawTheConstellation( _ stars: [CGPoint]) -> some View {
         for point in stars.dropFirst() {
             path.addLine(to: point)
         }
-        
-//        for i in 1..<stars.count {
-//            let previous = stars[i - 1]
-//            let current = stars[i]
-//            
-//            //Add an offset variable to make the curve more exaggerated
-//            let offset: CGFloat = 30
-//            
-//            //Draw the mid point in a way that they're kind of dynamic
-//            let controlX = (previous.x + current.x) / 2
-//            let controlY = (previous.y + current.y) / 2 + ((i % 2 == 0) ? offset : -offset)
-//            
-//            let controlPoint = CGPoint(x: controlX, y: controlY)
-//            
-//            path.addQuadCurve(to: current, control: controlPoint)
-//            
-//        }
-        //Let's calculate the middle points between two stars in order to create the curve
-        //            let mid1 = CGPoint(x: (previous.x + current.x) / 2, y: previous.y)
-        //            let mid2 = CGPoint(x: (previous.x + current.x) / 2, y: current.y)
-        
-        
-        // Control point: Midpoint between previous and current
-        //                       let controlPoint = CGPoint(
-        //                           x: (previous.x + current.x) / 2,
-        //                           y: (previous.y + current.y) / 2
-        //                       )
-        
-        //Let's draw the curve
-        //            path.addCurve(to: current, control1: mid1, control2: mid2)
-        //        }
-        
-        //            path.addArc(tangent1End: mid1, tangent2End: mid2, radius: 10)
-        
-        //            path.addQuadCurve(to: current, control: controlPoint)
-        //        }
     }
     .stroke(Color.white, lineWidth: 1)
     
