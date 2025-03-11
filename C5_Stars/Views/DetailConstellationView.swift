@@ -118,5 +118,5 @@ private func randomFrame() -> CGFloat {
 
 // MARK: - PREVIEW
 #Preview {
-    ConstellationView()
+    DetailConstellationView()
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ConstellationTitle: View {
     
-    @Environment(ConstellationViewModel.self) var constellationVM
+    @EnvironmentObject var constellationVM: ConstellationViewModel
     
     var constellationTitle: String
     
@@ -31,7 +31,7 @@ struct ConstellationTitle: View {
 #Preview {
     ZStack{
         Image("T")
-        ConstellationTitle(constellationTitle: "Preview Placeholer").environment(ConstellationViewModel())
+        ConstellationTitle(constellationTitle: "Preview Placeholer").environmentObject(ConstellationViewModel())
             .frame(width: 350, height: 130)
     }
 }
