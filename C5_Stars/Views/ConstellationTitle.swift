@@ -9,9 +9,7 @@ import SwiftUI
 
 struct ConstellationTitle: View {
     
-    @EnvironmentObject var constellationVM: ConstellationViewModel
-    
-    var constellationTitle: String
+    var selectedConstellationTitle: String
     
     var body: some View {
         ZStack {
@@ -19,7 +17,7 @@ struct ConstellationTitle: View {
                 .background(.ultraThinMaterial)
                 .cornerRadius(40)
             //This recieves a string from the user constellation selection inside of the NightSkyView
-            Text(constellationTitle)
+            Text(selectedConstellationTitle)
                 .font(.system(size: 35, weight: .bold))
                 .foregroundColor(.white)
                 .padding()
@@ -31,7 +29,7 @@ struct ConstellationTitle: View {
 #Preview {
     ZStack{
         Image("T")
-        ConstellationTitle(constellationTitle: "Preview Placeholer").environmentObject(ConstellationViewModel())
+        ConstellationTitle(selectedConstellationTitle: "Placeholder")
             .frame(width: 350, height: 130)
     }
 }
