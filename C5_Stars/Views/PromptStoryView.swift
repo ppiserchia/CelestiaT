@@ -7,35 +7,37 @@
 
 import SwiftUI
 
-//@Environment(ConstellationViewModel.self) var constellationVM
-
 struct PromptStoryView: View {
-    @EnvironmentObject var starsVM: StarViewModel
-    @EnvironmentObject var constellationVM: ConstellationViewModel
 
+    var promptName: String
+    var promptStory: String
+    
     var body: some View {
         ZStack {
             Rectangle()
-                .background(.ultraThinMaterial)
-                .cornerRadius(40)
+                .foregroundColor(.nightSkyBlackCenter)
+                .cornerRadius(15)
+                .frame(width: 210, height: 100)
+                .offset(x: -65, y: -224)
+            Text(promptName)
+                .font(.system(size: 16, weight: .heavy))
+                .foregroundColor(.white)
+                .offset(x: -65, y: -251)
+            Rectangle()
+                .foregroundColor(.white)
+                .cornerRadius(50)
+                .frame(width: 340, height: 460)
             VStack {
-                Text("Prompt Story")
-                    .font(.system(size: 35, weight: .bold))
-                    .foregroundColor(.white)
+                Text(promptStory)
+                    .font(.system(size: 20, weight: .regular))
+                    .foregroundColor(.black)
                     .padding()
-                    .frame(width: 350)
-                
-                Divider()
-                    .frame(width: 300, height: 2)
-                    .overlay(.white)
-    
-                Text("Lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor quam id massa faucibus dignissim. Nullam eget metus id nisl malesuada condimentum. Nam viverra fringilla erat, ut fermentum nunc feugiat eu.")
-                    .font(.system(size: 27, weight: .thin))
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 350)
+                    .frame(width: 320)
                     .multilineTextAlignment(.leading)
+                    .padding(.top, 26)
+                Spacer()
             }
+            .frame(height: 460)
         }
     }
 }
@@ -43,9 +45,7 @@ struct PromptStoryView: View {
 #Preview {
     ZStack{
         Image("T")
-        PromptStoryView()
-            .environment(StarViewModel())
-            .environment(ConstellationViewModel())
+        PromptStoryView(promptName: "Hormone Therapy", promptStory: "Lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor quam id massa faucibus dignissim. Nullam eget metus id nisl malesuada condimentum. Nam viverra fringilla erat, ut fermentum nunc feugiat eu.")
             .frame(width: 350, height: 600)
     }
 }

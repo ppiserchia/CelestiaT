@@ -37,7 +37,7 @@ struct ConstellationDetailView: View {
                     .foregroundStyle(.white)
                     .padding(20)
                 
-                PromptStoryView()
+               // PromptStoryView()
                     .frame(width: 350, height: 500)
 
                 
