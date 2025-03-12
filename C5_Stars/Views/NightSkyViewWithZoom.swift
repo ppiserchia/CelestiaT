@@ -20,7 +20,7 @@ struct NightSkyViewWithZoom: View {
             //here is where we're supposed to insert the navigation link
             NavigationLink {
                 //here is the DestinationView
-                DetailConstellationView()
+                ConstellationDetailView()
                     .navigationTransition(.zoom(sourceID: "zoomTransition", in: namespace))
 //                    .navigationBarBackButtonHidden(true)
             } label: {
