@@ -27,7 +27,7 @@ struct FirstOnBoardingView: View {
                     .bold()
                     .foregroundStyle(.white)
                 
-                NavigationLink(destination: EmptyView()
+                NavigationLink(destination: SecondOnBoardingView()
                     .navigationBarBackButtonHidden(true)) {
                     Text("Start the experience.")
                             .bold()
