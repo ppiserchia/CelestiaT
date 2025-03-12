@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ConstellationTitle: View {
     
-    @EnvironmentObject var constellationVM: ConstellationViewModel
-    
     var selectedConstellationTitle: String
     
     var body: some View {
@@ -31,7 +29,7 @@ struct ConstellationTitle: View {
 #Preview {
     ZStack{
         Image("T")
-        ConstellationTitle(selectedConstellationTitle: "Placeholder").environmentObject(ConstellationViewModel())
+        ConstellationTitle(selectedConstellationTitle: "Placeholder")
             .frame(width: 350, height: 130)
     }
 }

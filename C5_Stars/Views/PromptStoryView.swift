@@ -10,6 +10,9 @@ import SwiftUI
 //@Environment(ConstellationViewModel.self) var constellationVM
 
 struct PromptStoryView: View {
+    @EnvironmentObject var starsVM: StarViewModel
+    @EnvironmentObject var constellationVM: ConstellationViewModel
+
     var body: some View {
         ZStack {
             Rectangle()
@@ -41,6 +44,8 @@ struct PromptStoryView: View {
     ZStack{
         Image("T")
         PromptStoryView()
+            .environment(StarViewModel())
+            .environment(ConstellationViewModel())
             .frame(width: 350, height: 600)
     }
 }
