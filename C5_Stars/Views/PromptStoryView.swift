@@ -27,7 +27,7 @@ struct PromptStoryView: View {
                     .overlay(.white)
     
                 Text("Lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor quam id massa faucibus dignissim. Nullam eget metus id nisl malesuada condimentum. Nam viverra fringilla erat, ut fermentum nunc feugiat eu.")
-                    .font(.system(size: 27, weight: .bold))
+                    .font(.system(size: 27, weight: .thin))
                     .foregroundColor(.white)
                     .padding()
                     .frame(width: 350)
