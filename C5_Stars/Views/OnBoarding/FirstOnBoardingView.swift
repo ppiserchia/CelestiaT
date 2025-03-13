@@ -32,7 +32,7 @@ struct FirstOnBoardingView: View {
                     Text("Start the experience.")
                             .bold()
                         .padding(15)
-                        .background(Color.white)
+                        .background(.ultraThinMaterial)
                         .foregroundColor(.black)
                         .cornerRadius(15)
                         .clipShape(Rectangle())

@@ -18,6 +18,7 @@ struct SecondOnBoardingView: View {
                 .offset(x: -65, y: -224)
             
             Rectangle()
+//                .background(.thinMaterial)
                 .foregroundColor(.white)
                 .cornerRadius(50)
                 .frame(width: 370, height: 500)
