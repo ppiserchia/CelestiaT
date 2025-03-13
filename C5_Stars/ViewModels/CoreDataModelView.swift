@@ -25,6 +25,7 @@ class CoreDataModelView: ObservableObject {
         fetchStar()
     }
     
+    
     func fetchStar() {
         let request = NSFetchRequest<StarEntity>(entityName: "StarEntity")
         
