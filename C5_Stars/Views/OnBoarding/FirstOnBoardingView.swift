@@ -10,37 +10,41 @@ import SwiftUI
 struct FirstOnBoardingView: View {
     var body: some View {
         NavigationStack {
-        ZStack {
-//            Image("T")
-//                .ignoresSafeArea()
-            RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
-                .ignoresSafeArea()
-            
-            VStack {
-                Image("T")
-                    .resizable()
-                    .frame(width: 250, height: 250)
-                    .cornerRadius(30)
+            ZStack {
+
+                RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
+                    .ignoresSafeArea()
                 
-                Text("Placeholder")
-                    .font(.title)
-                    .bold()
-                    .foregroundStyle(.white)
-                
-                NavigationLink(destination: SecondOnBoardingView()
-                    .navigationBarBackButtonHidden(true)) {
-                    Text("Start the experience.")
-                            .bold()
-                        .padding(15)
-                        .background(.ultraThinMaterial)
-                        .foregroundColor(.black)
-                        .cornerRadius(15)
-                        .clipShape(Rectangle())
-                        .padding(30)
+                VStack {
+                    Image("iconDef")
+                        .resizable()
+                        .frame(width: 250, height: 250)
+                        .cornerRadius(30)
+                        
+                    Text("Celestia")
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.white)
+                        .padding()
+                    
+                    Text("Welcome in your safe space.")
+                        .font(.title2)
+                        .bold()
+                        .foregroundStyle(.white)
+                    
+                    NavigationLink(destination: SecondOnBoardingView()
+                        .navigationBarBackButtonHidden(true)) {
+                            Text("Start the experience.")
+                                .bold()
+                                .padding(15)
+                                .background(.ultraThinMaterial)
+                                .foregroundColor(.black)
+                                .cornerRadius(15)
+                                .clipShape(Rectangle())
+                                .padding(30)
+                        }
                 }
             }
-            }
-            
         }
     }
 }
