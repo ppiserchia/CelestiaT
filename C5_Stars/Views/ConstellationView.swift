@@ -25,7 +25,8 @@ struct ConstellationView: View {
                     // Generate random stars when the view appears
                     Color.clear
                         .onAppear {
-                            generateConstellation(in: geometry.size)
+//                            generateConstellation(in: geometry.size)
+                            loadOrGenerateConstellation(in: geometry.size)
                         }
                 } else {
                     drawTheConstellation(stars)
@@ -35,9 +36,22 @@ struct ConstellationView: View {
     }
     
     //MARK: - CIRCLES' METHODS
-    private func generateConstellation(in size: CGSize) {
-        let unorderedStars = generateStars(in: size)
-        stars = findNearestNeighbor(points: unorderedStars) //Store the ordered version
+//    private func generateConstellation(in size: CGSize) {
+//        let unorderedStars = generateStars(in: size)
+//        stars = findNearestNeighbor(points: unorderedStars) //Store the ordered version
+//    }
+    
+    //Load or generate stars from CoreData
+    func loadOrGenerateConstellation(in size: CGSize) {
+        let savedStars = coreDataVM.convertStars()
+        
+        if !savedStars.isEmpty {
+            stars = savedStars// Use stored stars already generated
+        } else {
+            let unorderedStars = generateStars(in: size)
+            stars = findNearestNeighbor(points: unorderedStars)
+            coreDataVM.saveStars(stars)
+        }
     }
     
     private func generateStars(in size: CGSize) -> [CGPoint] {
