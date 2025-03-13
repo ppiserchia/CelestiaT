@@ -1,6 +1,16 @@
+//
+//  ConstellationView.swift
+//  CreateAConstellation
+//
+//  Created by Gina Saviano on 03/03/25.
+//
+
 import SwiftUI
+import CoreData
 
 struct ConstellationView: View {
+    @StateObject var coreDataVM = CoreDataModelView() //the variable we'll need to call all the methods inside the CoreDataVM
+    
     @State private var selectedStar: StarModel? // Tracks selected star
     @EnvironmentObject var starsVM: StarViewModel // EnvironmentObject should be the ViewModel
     @State private var stars: [CGPoint] = [] //empty array to store the positions of the stars
@@ -24,19 +34,16 @@ struct ConstellationView: View {
         }
     }
     
-    //MARK: - SAVE AND LOAD DATA ABOUT CONSTELLATIONS
-    //CoreData
-    
     //MARK: - CIRCLES' METHODS
     private func generateConstellation(in size: CGSize) {
-        stars = generateStars(in: size)
-        stars = findNearestNeighbor(points: stars)
+        let unorderedStars = generateStars(in: size)
+        stars = findNearestNeighbor(points: unorderedStars) //Store the ordered version
     }
     
     private func generateStars(in size: CGSize) -> [CGPoint] {
         var generatedStars: [CGPoint] = []
         let minDistance: CGFloat = 40
-        
+
         while generatedStars.count < numberOfStars { //this is where we decide how many stars
             let newPoint = CGPoint(
                 x: CGFloat.random(in: 50...(size.width - 50)),

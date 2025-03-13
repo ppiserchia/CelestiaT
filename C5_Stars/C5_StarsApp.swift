@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct C5_StarsApp: App {
-    
     var constellationVM = ConstellationViewModel()
     
     var body: some Scene {
