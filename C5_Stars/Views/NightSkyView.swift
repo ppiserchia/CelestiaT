@@ -43,8 +43,11 @@ struct NightSkyView: View {
                             //HStack embbeded in a VSTack for getting spacing both horizontal and vertical spacing
                         VStack(spacing: 50){
                             HStack(spacing: 50){
+//                                ForEach(constellationVM.constellationArray){ constellation in
+//                                    NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber, constellationNightSkyWithZoomTitle: constellation.constellationName, constellationNightSkyWithZoomPrompt: constellation.stars, constellationNightSkyWithZoomStory: constellation.stars)
+//                                }
                                 ForEach(constellationVM.constellationArray){ constellation in
-                                    NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber)
+                                    NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber, constellationNightSkyWithZoomTitle: constellation.constellationName, stars: constellation.stars)
                                 }
                                 .frame(width: 300, height: 500)
                             }
@@ -74,7 +77,7 @@ struct NightSkyView: View {
                             self.offset.height = self.prevOffset.height + value.translation.height
                         })
                         .onEnded({ value in
-                            self.prevOffset = self.offset                    })
+                            self.prevOffset = self.offset})
                 )
                 .simultaneousGesture(
                     MagnifyGesture(minimumScaleDelta: 0)
