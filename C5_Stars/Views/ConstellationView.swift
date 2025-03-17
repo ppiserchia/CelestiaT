@@ -108,7 +108,8 @@ private func drawTheConstellation( _ stars: [CGPoint]) -> some View {
 
 // Randomize the frame of the stars to 5 to 25
 private func randomFrame() -> CGFloat {
-    return CGFloat.random(in: 5...25)
+//    return CGFloat.random(in: 5...25)
+    return CGFloat.random(in: 5...45)
 }
 
 // MARK: - PREVIEW

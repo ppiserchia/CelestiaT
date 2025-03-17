@@ -43,26 +43,12 @@ struct NightSkyView: View {
                             //HStack embbeded in a VSTack for getting spacing both horizontal and vertical spacing
                         VStack(spacing: 50){
                             HStack(spacing: 50){
-//                                ForEach(constellationVM.constellationArray){ constellation in
-//                                    NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber, constellationNightSkyWithZoomTitle: constellation.constellationName, constellationNightSkyWithZoomPrompt: constellation.stars, constellationNightSkyWithZoomStory: constellation.stars)
-//                                }
                                 ForEach(constellationVM.constellationArray){ constellation in
                                     NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber, constellationNightSkyWithZoomTitle: constellation.constellationName, stars: constellation.stars)
                                 }
                                 .frame(width: 300, height: 500)
                             }
                         }
-                            
-                            
-//                            NightSkyViewWithZoom()
-//                                .frame(width: 400, height: 500)
-//                                .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
-//                         
-//                            
-//                            NightSkyViewWithZoom()
-//                                .frame(width: 400, height: 100
-//                                )
-
  
                     }
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Centered initially
@@ -90,8 +76,6 @@ struct NightSkyView: View {
     
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            //     .background(.black.opacity(0.8))
-            
         }
     } 
 }
@@ -100,6 +84,3 @@ struct NightSkyView: View {
 #Preview {
     NightSkyView().environmentObject(ConstellationViewModel())
 }
-
-
-//trying to see if now it works -G.
