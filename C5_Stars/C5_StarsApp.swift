@@ -14,7 +14,7 @@ struct C5_StarsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NightSkyView()
+            OnBoardingView()
                 .environmentObject(constellationVM)
         }
     }
