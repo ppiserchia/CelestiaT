@@ -16,18 +16,13 @@ struct NightSkyViewWithZoom: View {
     var numberOfStarsNightZoom: Int
     var constellationNightSkyWithZoomTitle: String
     var stars: [StarModel]
-//    var constellationNightSkyWithZoomPrompt: Prompt
-//    var constellationNightSkyWithZoomStory: String
     
     var body: some View {
         NavigationStack{
             //here is where we're supposed to insert the navigation link
             NavigationLink {
-                //here is the DestinationView
-//                ConstellationDetailView(constellationDetailViewTitle: constellationNightSkyWithZoomTitle, constellationDetailViewStarPromt: constellationNightSkyWithZoomPrompt, constellationDetailViewStarStory: constellationNightSkyWithZoomStory)
                 ConstellationDetailView(constellationDetailViewTitle: constellationNightSkyWithZoomTitle, stars: stars)
                     .navigationTransition(.zoom(sourceID: "zoomTransition", in: namespace))
-//                    .navigationBarBackButtonHidden(true)
             } label: {
                 ZStack{
                     GeometryReader { geometry in
@@ -46,7 +41,6 @@ struct NightSkyViewWithZoom: View {
 
 
 #Preview {
-//    NightSkyViewWithZoom(numberOfStarsNightZoom: 5, constellationNightSkyWithZoomTitle: "Creative Beaver", constellationNightSkyWithZoomPrompt: Prompt(PromptName: "Coming out"), constellationNightSkyWithZoomStory: "Lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor quam id massa faucibus dignissim. Nullam eget metus id nisl malesuada condimentum. Nam viverra fringilla erat, ut fermentum nunc feugiat eu.")
     NightSkyViewWithZoom(numberOfStarsNightZoom: 5, constellationNightSkyWithZoomTitle: "Creative Beaver",
          stars: [
              StarModel(
