@@ -14,20 +14,44 @@ struct ConstellationDetailView: View {
     var stars: [StarModel]
     
     var body: some View {
-        
         ZStack {
-            VStack {
-                ConstellationTitle(selectedConstellationTitle: constellationDetailViewTitle)
-                    .frame(width: 350, height: 100)
-                    .padding(20)
-                
-                
-                Image(systemName: "fan.fill") // Placeholder
-                    .font(.system(size: 50, weight: .bold))
-                    .foregroundStyle(.white)
-                    .padding(20)
-                PromptStoryView(stars: stars)
-                    .frame(width: 350, height: 500)
+            GeometryReader { geometry in
+                RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
+                    .frame(width: 700 * 10, height: 700 * 10)
+                    .ignoresSafeArea()
+                VStack {
+                    ConstellationTitle(selectedConstellationTitle: constellationDetailViewTitle)
+                        .frame(width: 350, height: 100)
+                        .padding(20)
+                    
+                    ZStack{
+                        //Preview of the constellation selected
+                        ConstellationView(numberOfStars: stars.count)
+                            .position(x: geometry.size.width / 2, y: geometry.size.height * 0.0009)
+                            .frame(height: 300)
+                        
+                        //For checking all of the stories inside of the constellation
+                        ScrollView(.horizontal){
+                            LazyHStack{
+                                ForEach(stars){ star in
+                                    PromptStoryView(stars: star)
+                                        .frame(width: 350)
+                                        .position(x: geometry.size.width / 2, y: geometry.size.height * 0.6)
+//                                        .containerRelativeFrame(.horizontal)
+                                        .scrollTransition { content, phase in
+                                            content
+                                                .scaleEffect(
+                                                    x: phase.isIdentity ? 1.0 : 0.8,
+                                                    y: phase.isIdentity ? 1.0 : 0.8
+                                                )
+                                                .offset(y: phase.isIdentity ? 0: 100)
+                                            
+                                        }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
