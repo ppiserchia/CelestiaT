@@ -37,7 +37,6 @@ struct ConstellationDetailView: View {
                                     PromptStoryView(stars: star)
                                         .frame(width: 350)
                                         .position(x: geometry.size.width / 2, y: geometry.size.height * 0.6)
-//                                        .containerRelativeFrame(.horizontal)
                                         .scrollTransition { content, phase in
                                             content
                                                 .scaleEffect(

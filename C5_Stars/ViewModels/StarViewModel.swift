@@ -56,5 +56,44 @@ class StarViewModel: ObservableObject {
         
     ]
     
+    var criFriendConstellation: [StarModel] = [
+        StarModel(
+            starPrompt: Prompt(PromptName: "HTR"),
+            user: "Fierce Chinchilla",
+            starStory: "I haven't yet started HRT because of the issues I'm scared I might face with my current medical issues, but I definitely want to start. However I’ve been slowly coming out to first my girlfriend and then family and friends anyway."
+        ),
+        
+        StarModel(
+            starPrompt: Prompt(PromptName: "Coming Out"),
+            user: "Fierce Chinchilla",
+            starStory: "I first discovered I was trans after meeting another trans person that explained how she and her -also trans- husband had found out. And it aligned a lot with the issues I'd felt with my own body, mind and feelings. Coming out is always hard, it feels like your entire world is about to crumble. You get some pretty nasty fears and thoughts at the start. For me those really disappeared when my family and girlfriend said they loved me no matter what and would support me in what I wish to do."
+        ),
+        
+        StarModel(
+            starPrompt: Prompt(PromptName: "Dysphoria"),
+            user: "Fierce Chinchilla",
+            starStory: "At first I didn't realize how bad my dysphoria was affecting me on a personal level and the relationships I’d had. After I realized I was trans I started to change a lot of things slowly. I learned to change my vocal range and talk more feminine and started growing out my hair. Some days my dysphoria is worse than others, but doing small things like growing my hair has been helping me a lot. Even practicing makeup!"
+        ),
+        
+        StarModel(
+            starPrompt: Prompt(PromptName: "Love life"),
+            user: "Fierce Chinchilla",
+            starStory: "My love life at first suffered very heavily. I’d been in a one year relationship at the time where she'd gotten so used to seeing me as something else. And suddenly it gets flipped on its head. The whole dynamic started to shift and it took a lot of time and communication to figure it out between me and her. However, now we are in a situationship and she's my biggest supporter."
+        ),
+        
+        StarModel(
+            starPrompt: Prompt(PromptName: "Community"),
+            user: "Fierce Chinchilla",
+            starStory: "I think we have amazing and inclusive groups! Like r/trans or r/asktrans, to help cis people understand and talk to people without being scared of making us uncomfortable or worried that we could take what they say as a statement rather than genuine curiosity. I'm personally not very active in those spaces and I feel that's been the best thing for me."
+        ),
+        
+        StarModel(
+            starPrompt: Prompt(PromptName: "Surgeries"),
+            user: "Fierce Chinchilla",
+            starStory: "Gender dysphoria has been very difficult for me, so it's been hard not to run into a hospital and ask for everything to be done asap. However I think I need to let my mind slowly adapt to myselt and my body. I'm definitely planning on getting everything done that I need/want! But in due time."
+        ),
+
+    ]
+    
 }
 
