@@ -16,7 +16,7 @@ class PromptViewModel: ObservableObject {
     var promptArray: [Prompt] = [
         Prompt(PromptName: "HTR"),
         Prompt(PromptName: "Coming out"),
-        Prompt(PromptName: "Therapy"),
+        Prompt(PromptName: "Pshycological Therapy"),
         Prompt(PromptName: "Sexuality"),
         Prompt(PromptName: "Gender Identity"),
         Prompt(PromptName: "Family"),
