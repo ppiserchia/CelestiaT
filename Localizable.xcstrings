@@ -1,0 +1,37 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "Explore constellations" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explora constelaciones"
+          }
+        }
+      }
+    },
+    "Just as you are." : {
+
+    },
+    "Start" : {
+
+    },
+    "They are made up\nof unique stories" : {
+
+    },
+    "Whenever\nyou want," : {
+
+    },
+    "wherever \nyou want." : {
+
+    },
+    "Your safe space" : {
+
+    }
+  },
+  "version" : "1.0"
+}
