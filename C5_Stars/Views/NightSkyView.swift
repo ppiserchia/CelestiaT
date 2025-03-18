@@ -65,14 +65,14 @@ struct NightSkyView: View {
                         .onEnded({ value in
                             self.prevOffset = self.offset})
                 )
-                .simultaneousGesture(
-                    MagnifyGesture(minimumScaleDelta: 0)
-                        .onChanged({ value in
-                            self.scale = self.prevScale * value.magnification
-                        })
-                        .onEnded( { value in
-                            self.prevScale = self.scale
-                        })        )
+//                .simultaneousGesture(
+//                    MagnifyGesture(minimumScaleDelta: 0)
+//                        .onChanged({ value in
+//                            self.scale = self.prevScale * value.magnification
+//                        })
+//                        .onEnded( { value in
+//                            self.prevScale = self.scale
+//                        })        )
     
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
