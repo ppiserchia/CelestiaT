@@ -89,7 +89,7 @@ class StarViewModel: ObservableObject {
         ),
         
         StarModel(
-            starPrompt: Prompt(PromptName: "Surgeries"),
+            starPrompt: Prompt(PromptName: "Surgery"),
             user: "Fierce Chinchilla",
             starStory: "Gender dysphoria has been very difficult for me, so it's been hard not to run into a hospital and ask for everything to be done asap. However I think I need to let my mind slowly adapt to myselt and my body. I'm definitely planning on getting everything done that I need/want! But in due time."
         ),
