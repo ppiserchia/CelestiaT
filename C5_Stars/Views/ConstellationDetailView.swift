@@ -30,6 +30,7 @@ struct ConstellationDetailView: View {
                         ConstellationView(numberOfStars: stars.count, constellationName: constellationDetailViewTitle)
                             .position(x: geometry.size.width / 2, y: geometry.size.height * 0.0009)
                             .frame(height: 400)
+                            .padding(.bottom, 100)
                         
                         
                         //For checking all of the stories inside of the constellation

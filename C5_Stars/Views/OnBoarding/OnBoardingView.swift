@@ -12,6 +12,7 @@ struct OnBoardingView: View {
     //MARK: Setting up the properties for the animation
     @State var textCounter: Int = 0
     @State private var onBoardingTwoEnd: Bool = false
+    @Binding var hasCompletedOnboarding: Bool
     
     var body: some View {
         NavigationStack {
@@ -114,7 +115,10 @@ Just as you are.
                        
                         // Seventh text
                     case 6:
-                        NavigationLink(destination: NightSkyView().navigationBarBackButtonHidden()) {
+                        NavigationLink(destination: NightSkyView().navigationBarBackButtonHidden().onAppear {
+                            // Mark onboarding as completed when navigating to NightSkyView
+                            hasCompletedOnboarding = true
+                        }) {
                             VStack {
                                 Image("star_asset")
                                     .resizable()
@@ -159,12 +163,12 @@ Just as you are.
  //MARK: Inject the ConstellationViewModel via the environment modifier, because we're passing from the OnBoardingView to the NightSkyView, where the VM is actually used.
 
 #Preview {
-    OnBoardingView()
+    OnBoardingView(hasCompletedOnboarding: .constant(false))
         .environment(ConstellationViewModel())
 }
 
 #Preview("Spanish") {
-    OnBoardingView()
+    OnBoardingView(hasCompletedOnboarding: .constant(false))
         .environment(\.locale, Locale(identifier: "es"))
         .environment(ConstellationViewModel())
 }

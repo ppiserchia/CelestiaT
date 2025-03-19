@@ -25,6 +25,7 @@ class PersistenceManager {
     
     private let userDefaults = UserDefaults.standard
     private let constellationsKey = "savedConstellations"
+    private let hasLaunchedBeforeKey = "hasLaunchedBefore"
     
     private init() {}
     
@@ -89,6 +90,17 @@ class PersistenceManager {
     // Clear all saved constellations
     func clearAllConstellations() {
         userDefaults.removeObject(forKey: constellationsKey)
+        userDefaults.synchronize() // Force synchronization to ensure data persists
+    }
+    
+    // Check if the app has been launched before
+    func hasLaunchedBefore() -> Bool {
+        return userDefaults.bool(forKey: hasLaunchedBeforeKey)
+    }
+    
+    // Set that the app has been launched
+    func setAppHasLaunched() {
+        userDefaults.set(true, forKey: hasLaunchedBeforeKey)
         userDefaults.synchronize() // Force synchronization to ensure data persists
     }
 }
