@@ -16,6 +16,7 @@ struct NightSkyViewWithZoom: View {
     var numberOfStarsNightZoom: Int
     var constellationNightSkyWithZoomTitle: String
     var stars: [StarModel]
+
     
     var body: some View {
         NavigationStack{
@@ -27,7 +28,7 @@ struct NightSkyViewWithZoom: View {
                 ZStack{
                     GeometryReader { geometry in
                         ZStack {
-                            ConstellationView(numberOfStars: numberOfStarsNightZoom)
+                            ConstellationView(numberOfStars: numberOfStarsNightZoom, constellationName: constellationNightSkyWithZoomTitle)
                                 .frame(width: 400, height: 500)               .matchedTransitionSource(id: "zoomTransition", in: namespace)
                         }
                         

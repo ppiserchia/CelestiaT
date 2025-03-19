@@ -27,9 +27,10 @@ struct ConstellationDetailView: View {
                     
                     ZStack{
                         //Preview of the constellation selected
-                        ConstellationView(numberOfStars: stars.count)
+                        ConstellationView(numberOfStars: stars.count, constellationName: constellationDetailViewTitle)
                             .position(x: geometry.size.width / 2, y: geometry.size.height * 0.0009)
-                            .frame(height: 300)
+                            .frame(height: 400)
+                        
                         
                         //For checking all of the stories inside of the constellation
                         ScrollView(.horizontal){
@@ -50,7 +51,9 @@ struct ConstellationDetailView: View {
                                 }
                             }
                         }
+                        
                     }
+                    
                 }
             }
         }
