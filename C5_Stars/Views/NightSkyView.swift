@@ -44,22 +44,11 @@ struct NightSkyView: View {
                         VStack(spacing: 50){
                             HStack(spacing: 50){
                                 ForEach(constellationVM.constellationArray){ constellation in
-                                    NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber)
+                                    NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber, constellationNightSkyWithZoomTitle: constellation.constellationName, stars: constellation.stars)
                                 }
                                 .frame(width: 300, height: 500)
                             }
                         }
-                            
-                            
-//                            NightSkyViewWithZoom()
-//                                .frame(width: 400, height: 500)
-//                                .offset(x: geometry.size.width / 2, y: geometry.size.height / 2)
-//                         
-//                            
-//                            NightSkyViewWithZoom()
-//                                .frame(width: 400, height: 100
-//                                )
-
  
                     }
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Centered initially
@@ -74,21 +63,20 @@ struct NightSkyView: View {
                             self.offset.height = self.prevOffset.height + value.translation.height
                         })
                         .onEnded({ value in
-                            self.prevOffset = self.offset                    })
+                            self.prevOffset = self.offset})
                 )
-                .simultaneousGesture(
-                    MagnifyGesture(minimumScaleDelta: 0)
-                        .onChanged({ value in
-                            self.scale = self.prevScale * value.magnification
-                        })
-                        .onEnded( { value in
-                            self.prevScale = self.scale
-                        })        )
+                //For the zoom gesture
+//                .simultaneousGesture(
+//                    MagnifyGesture(minimumScaleDelta: 0)
+//                        .onChanged({ value in
+//                            self.scale = self.prevScale * value.magnification
+//                        })
+//                        .onEnded( { value in
+//                            self.prevScale = self.scale
+//                        })        )
     
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            //     .background(.black.opacity(0.8))
-            
         }
     } 
 }
@@ -98,5 +86,8 @@ struct NightSkyView: View {
     NightSkyView().environmentObject(ConstellationViewModel())
 }
 
-
-//trying to see if now it works -G.
+//For adding a new language preview
+#Preview("Spanish") {
+    NightSkyView().environmentObject(ConstellationViewModel())
+        .environment(\.locale, Locale(identifier: "es"))
+}

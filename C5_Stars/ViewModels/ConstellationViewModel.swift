@@ -23,6 +23,12 @@ class ConstellationViewModel: ObservableObject {
             constellationName: StarViewModel().marcoConstellation[0].user,
             stars: StarViewModel().marcoConstellation,
             starNumber: StarViewModel().marcoConstellation.count
+        ),
+        
+        ConstellationModel(
+            constellationName: StarViewModel().criFriendConstellation[0].user,
+            stars: StarViewModel().criFriendConstellation,
+            starNumber: StarViewModel().criFriendConstellation.count
         )
     ]
 }
