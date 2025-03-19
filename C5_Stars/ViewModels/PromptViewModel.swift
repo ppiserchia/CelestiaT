@@ -13,7 +13,7 @@ import SwiftUI
 class PromptViewModel: ObservableObject {
     
     var promptArray: [Prompt] = [
-        Prompt(PromptName: "HTR"),
+        Prompt(PromptName: "HRT"),
         Prompt(PromptName: "Coming Out"),
         Prompt(PromptName: "Therapy"),
         Prompt(PromptName: "Sexuality"),

@@ -59,7 +59,7 @@ class StarViewModel: ObservableObject {
     
     var criFriendConstellation: [StarModel] = [
         StarModel(
-            starPrompt: Prompt(PromptName: "HTR"),
+            starPrompt: Prompt(PromptName: "HRT"),
             user: "Fierce Chinchilla",
             starStory: "I haven't yet started HRT because of the issues I'm scared I might face with my current medical issues, but I definitely want to start. However I’ve been slowly coming out to first my girlfriend and then family and friends anyway."
         ),

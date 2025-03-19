@@ -276,12 +276,12 @@
         }
       }
     },
-    "HTR" : {
+    "HRT" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "THS"
+            "value" : "Terapia Hormonal"
           }
         },
         "it" : {
@@ -345,7 +345,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Todavía no he empezado con la THS por miedo a los problemas que podría tener con mis problemas médicos actuales, pero definitivamente quiero empezar. Sin embargo, he ido saliendo del armario poco a poco, primero con mi novia y luego con mi familia y amigos."
+            "value" : "Todavía no he empezado con la TRH por miedo a los problemas que podría tener con mis problemas médicos actuales, pero definitivamente quiero empezar. Sin embargo, he ido saliendo del armario poco a poco, primero con mi novia y luego con mi familia y amigos."
           }
         },
         "it" : {
