@@ -324,7 +324,14 @@
       }
     },
     "Start" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inizia"
+          }
+        }
+      }
     },
     "Surgery" : {
       "localizations" : {
@@ -350,7 +357,14 @@
 
     },
     "Trans Community" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comunità Trans"
+          }
+        }
+      }
     },
     "Whenever\nyou want," : {
 
