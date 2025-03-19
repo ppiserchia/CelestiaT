@@ -5,22 +5,54 @@
 
     },
     "Activism" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activismo"
+          }
+        }
+      }
     },
     "At first I didn't realize how bad my dysphoria was affecting me on a personal level and the relationships I’d had. After I realized I was trans I started to change a lot of things slowly. I learned to change my vocal range and talk more feminine and started growing out my hair. Some days my dysphoria is worse than others, but doing small things like growing my hair has been helping me a lot. Even practicing makeup!" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al principio no me daba cuenta de lo mucho que me estaba afectando mi disforia a nivel personal y las relaciones que había tenido. Cuando me di cuenta de que era trans, empecé a cambiar muchas cosas poco a poco. Aprendí a cambiar mi registro vocal y a hablar de forma más femenina y empecé a dejarme crecer el pelo. Algunos días mi disforia es peor que otros, pero hacer pequeñas cosas como dejarme crecer el pelo me ha ayudado mucho. Incluso practicar el maquillaje! "
+          }
+        }
+      }
     },
     "Body Dysmorphia" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dismorfia Corporal"
+          }
+        }
+      }
     },
     "Clubbing" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salir de Fiesta"
+          }
+        }
+      }
     },
     "Clubbing is supposed to be fun for everyone, still as a trans person it can and it has been tricky for me, for many years. I'm a very energic and bubbly kind of guy and so I've been wanting to club since my teen years but I wasn't always confident enough to just go and have fun. When you're not comfortable in your own skin it's incredibly hard to just go and dance pressed against that many strangers. Fear and dysphoria have stopped me from enjoying the night life for way too much either because I felt  like I could not pass as a man, or that I couldn't wear club clothes that made me feel confident. Nowadays, no matter how much it took me, I'm grateful I can enjoy my youth the way I want to, dress the way I want and not fear being outed or hurt in any way when I go out clubbing. I still rather go to a queer club because I feel safer and at home, but it's a huge accomplishment for me, at this point in my transition, to be enjoying every sort of night club and know that my identity is not in danger nor ridiculed. I can just be me and live the moment." : {
-
-    },
-    "Coming out" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se supone que las discotecas son divertidas para todo el mundo, pero para mí, como persona trans, puede serlo y lo ha sido durante muchos años. Soy un tipo muy enérgico y amigable, así que he querido ir a discotecas desde mi adolescencia, pero no siempre he tenido la confianza suficiente para ir y divertirme. Cuando no te sientes cómodo en tu propia piel, es increíblemente difícil ir y bailar apretado contra tantos desconocidos. El miedo y la disforia me han impedido disfrutar de la vida nocturna durante demasiado tiempo porque sentía que no podía pasar por un hombre o porque no podía llevar ropa de discoteca que me hiciera sentir segura de mí misma. Hoy en día, por mucho que me haya costado, estoy agradecido de poder disfrutar de mi juventud como quiero, vestir como quiero y no temer que me descubran o me hagan daño de ninguna manera cuando salgo de fiesta. Sigo prefiriendo ir a una discoteca queer porque me siento más seguro y en casa, pero es un gran logro para mí, en este momento de mi transición, disfrutar de todo tipo de discotecas y saber que mi identidad no corre peligro ni es ridiculizada. Puedo ser yo mismo y vivir el momento."
+          }
+        }
+      }
     },
     "Coming Out" : {
       "localizations" : {
@@ -33,13 +65,34 @@
       }
     },
     "Community" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comunidad"
+          }
+        }
+      }
     },
     "Dysphoria" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disforia"
+          }
+        }
+      }
     },
     "Education" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Educación "
+          }
+        }
+      }
     },
     "Explore constellations" : {
       "localizations" : {
@@ -52,88 +105,256 @@
       }
     },
     "Family" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Familia"
+          }
+        }
+      }
     },
     "For me coming out is BIG topic for me, it’s one of this thing that feels sometimes wrong to do, because you will never know how people are going to react, maybe they not even care but for me at least , I feel like that , i feel exposed almost, it’s like if i put a big sign over my head with light on, maybe it’s just anxiety that’s talking but in general i talk about my sexuality ,experience etc with people I feel that are not going to judge or People that are curious about this kind of topic. But it’s again coming out it’s not a big of deal I come out to my mother and she accept me and I’m happy! Sometimes it can be hard and sometimes it’s the most liberating thing you can do with yourself." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para mí salir del armario es un tema GRANDE, es una de esas cosas que a veces me parece mal hacer, porque nunca sabes cómo va a reaccionar la gente, quizá ni siquiera les importe, pero al menos yo me siento así, casi expuestx, es como si me pusiera un gran cartel sobre mi cabeza con una luz encendida, quizá sea sólo mi ansiedad la que habla, pero en general hablo de mi sexualidad, experiencia, etc. con gente que creo que no va a juzgarme o con gente que siente curiosidad por este tipo de temas. Pero, de nuevo, salir del closet no es un gran problema. Yo salí del closet con mi madre y ella me aceptó, ¡y soy feliz! A veces puede ser duro y a veces es lo más liberador que puedes hacer contigo mismx."
+          }
+        }
+      }
     },
     "For me in media there is still work to do in representation, but we are in a good Start , especially in cartoons! And I’m so happy that the new generations can grow up maybe with a better representation not only for the LGBTQIA’s+ , but also the black community and everyone that feel not represented enough in their life. Good example of this is Craig of the Creek! A beautiful cartoon with a different cast of characters, with beautiful visual and story! Also each one of the characters is important and their identity don’t feel force or too much weird, it feels natural, and should be like this in every media that we consume , that’s not weird to see this kind of representation, it should be normal." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para mí, en los medios de comunicación aún queda trabajo por hacer en cuanto a representación, pero estamos en un buen comienzo, especialmente en las caricaturas!. Estoy muy contentx de que las nuevas generaciones puedan crecer con una mejor representación no sólo de los LGBTQIA+, sino también de la comunidad negra y de todxs aquellxs que no se sienten suficientemente representadxs en sus vidas. Un buen ejemplo de ello es Craig of the Creek. Un hermoso dibujo animado con un elenco diferente de personajes, con una hermosa historia visual. Además, cada uno de los personajes es importante y su identidad no se siente forzada o demasiado extraña, se siente natural, y debería ser así en todos los medios que consumimos, que no es raro ver este tipo de representación, debería ser normal."
+          }
+        }
+      }
     },
     "Friends" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amigxs"
+          }
+        }
+      }
     },
     "Gender dysphoria has been very difficult for me, so it's been hard not to run into a hospital and ask for everything to be done asap. However I think I need to let my mind slowly adapt to myselt and my body. I'm definitely planning on getting everything done that I need/want! But in due time." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La disforia de género ha sido muy difícil para mí, por lo que ha sido difícil no correr a un hospital y pedir que todo se haga lo antes posible. Sin embargo, creo que tengo que dejar que mi mente se adapte poco a poco a mí y a mi cuerpo. ¡Definitivamente estoy planeando que me hagan todo lo que necesito/quiero! Pero a su debido tiempo."
+          }
+        }
+      }
     },
     "Gender Euphoria" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euforia de Género"
+          }
+        }
+      }
     },
     "Gender Identity" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Identidad de Género"
+          }
+        }
+      }
     },
     "HTR" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "THS"
+          }
+        }
+      }
     },
     "I am the youngest between two brothers. My mom was very strict with me, and at first she didn't accept the fact that I was transitioning. My father didn't agree with my mom, and helped me not only morally standing for me and saying \"If I loved you as a girl, I will love you also as a boy, because you're my child\", but also financially. In the first years of transitioning, my mother didn't call me with my actual name, and that caused more and more problems in terms of the relationship I had with her. Now, after some time and disputes, my mother understood and she accepts me as I am. I forgive her for what she did in the past, for being so strict with me, and now we have a stabler relationship." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soy el menor de dos hermanos. Mi madre era muy estricta conmigo, y al principio no aceptaba el hecho de que estuviera en transición. Mi padre no estaba de acuerdo con mi madre, y me ayudó no sólo moralmente apoyándome y diciendo \"Si te quise como niña, te querré también como niño, porque eres mi hijo\", sino también económicamente. En los primeros años de transición, mi madre no me llamaba por mi nombre real, y eso causaba cada vez más problemas en la relación que tenía con ella. Ahora, después de tiempo y disputas, mi madre lo ha entendido y me acepta tal como soy. La perdono por lo que hizo en el pasado, por ser tan estricta conmigo, y ahora tenemos una relación más estable."
+          }
+        }
+      }
     },
     "I began the process 4 years ago, but changing my ID wasn't that simple. Bureaucratically speaking, the process itself wasn't easy, especially when the court of Salerno 2 years ago \"lost\" all the papers related to me, so I had to choose whether waiting for the bureaucracy to do the process, or paying a lawyer to help loose the process a little bit and at least, have my documents updated. I decided the second choice, paying over 5.000€, with my father's financial help. Also, I had some bureaucracy issues in enrolling at the University, just because I couldn't change my documents in a very short time." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empecé el proceso hace 4 años, pero cambiar mi DNI no fue tan sencillo. Burocráticamente hablando, el proceso en sí no fue fácil, sobre todo cuando el tribunal de Salerno hace 2 años \"perdió\" todos los papeles relacionados conmigo, así que tuve que elegir entre esperar a que la burocracia hiciera el proceso, o pagar a un abogado para ayudar a perder el proceso un poco y, al menos, tener mis documentos actualizados. Decidí la segunda opción, pagando más de 5.000 euros, con la ayuda financiera de mi padre. Además, tuve algunos problemas burocráticos a la hora de matricularme en la universidad, simplemente porque no pude cambiar mis documentos en muy poco tiempo."
+          }
+        }
+      }
     },
     "I first discovered I was trans after meeting another trans person that explained how she and her -also trans- husband had found out. And it aligned a lot with the issues I'd felt with my own body, mind and feelings. Coming out is always hard, it feels like your entire world is about to crumble. You get some pretty nasty fears and thoughts at the start. For me those really disappeared when my family and girlfriend said they loved me no matter what and would support me in what I wish to do." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descubrí que era trans después de conocer a otra persona trans que me explicó cómo ella y su marido, también trans, lo habían descubierto. Y coincidía mucho con los problemas que yo había sentido con mi propio cuerpo, mente y sentimientos. Salir del closet siempre es duro, parece que todo tu mundo está a punto de desmoronarse. Al principio tienes miedos y pensamientos bastante desagradables. En mi caso, desaparecieron cuando mi familia y mi novia me dijeron que me querían pasara lo que pasara y que me apoyarían en lo que quisiera hacer."
+          }
+        }
+      }
     },
     "I haven't yet started HRT because of the issues I'm scared I might face with my current medical issues, but I definitely want to start. However I’ve been slowly coming out to first my girlfriend and then family and friends anyway." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todavía no he empezado con la THS por miedo a los problemas que podría tener con mis problemas médicos actuales, pero definitivamente quiero empezar. Sin embargo, he ido saliendo del armario poco a poco, primero con mi novia y luego con mi familia y amigos."
+          }
+        }
+      }
     },
     "I think we have amazing and inclusive groups! Like r/trans or r/asktrans, to help cis people understand and talk to people without being scared of making us uncomfortable or worried that we could take what they say as a statement rather than genuine curiosity. I'm personally not very active in those spaces and I feel that's been the best thing for me." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creo que tenemos grupos increíbles e inclusivos. Como r/trans o r/asktrans, para ayudar a la gente cis a entender y hablar con la gente sin tener miedo de hacernos sentir incómodos o preocupados de que podamos tomar lo que dicen como una declaración en lugar de genuina curiosidad. Personalmente no soy muy activa en esos espacios y siento que eso ha sido lo mejor para mí."
+          }
+        }
+      }
     },
     "ID Change" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambio de ID"
+          }
+        }
+      }
     },
     "it’s a big topic for me also because it’s a bit funny , I still don’t know how do I feel about myself , I know that I’m not cis person, but I don’t know exactly how to define myself I don’t want to be label in something and I’m fine with it! I only like the term “non binary” for my gender identity because is the closest thing that feels what I’m going trough right now, I’m not confused or anything it’s just hard to define myself especially for my sexuality. People also when I tell this they usually label me as Gay or lesbian and everything you can imagine , but I just want to be me and that’s good enough ( i don’t know if it’s cringe sorry in advance)" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es un gran tema para mi también porque es un poco curioso, todavía no se como me siento sobre mi mismx, se que no soy una persona cis, pero no se exactamente como definirme, no quiero ser etiquetadx en algo y estoy bien con eso. Sólo me gusta el término «no binario» para mi identidad de género porque es lo más parecido a lo que estoy viviendo ahora mismo, no estoy confundidx ni nada de eso, sólo que es difícil definirme, especialmente en lo que se refiere a mi sexualidad. La gente también cuando digo esto por lo general me etiquetan como Gay o lesbiana y todo lo que te puedas imaginar, pero yo sólo quiero ser yo y eso es lo suficientemente bueno."
+          }
+        }
+      }
     },
     "Just as you are." : {
 
     },
     "Love Life" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vida Amorosa"
+          }
+        }
+      }
     },
     "Media Representation" : {
 
     },
     "My love life at first suffered very heavily. I’d been in a one year relationship at the time where she'd gotten so used to seeing me as something else. And suddenly it gets flipped on its head. The whole dynamic started to shift and it took a lot of time and communication to figure it out between me and her. However, now we are in a situationship and she's my biggest supporter." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mi vida amorosa al principio sufrió mucho. Llevaba un año de relación y ella se había acostumbrado a verme como otra cosa. Y de repente se dio la vuelta. Toda la dinámica empezó a cambiar y costó mucho tiempo y comunicación resolverlo entre ella y yo. Sin embargo, ahora estamos en una situación de pareja y ella es mi mayor apoyo."
+          }
+        }
+      }
     },
     "Pshycological Therapy" : {
 
     },
     "Religion" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Religión"
+          }
+        }
+      }
     },
     "Sexuality" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sexualidad"
+          }
+        }
+      }
     },
     "Shopping" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compras"
+          }
+        }
+      }
     },
     "Start" : {
-
-    },
-    "Surgeries" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio"
+          }
+        }
+      }
     },
     "Surgery" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cirugía "
+          }
+        }
+      }
+    },
+    "Therapy" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terapia"
+          }
+        }
+      }
     },
     "They are made up\nof unique stories" : {
 
     },
     "Trans Community" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comunidad Trans"
+          }
+        }
+      }
     },
     "Whenever\nyou want," : {
 
@@ -142,7 +363,14 @@
 
     },
     "Work" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trabajo"
+          }
+        }
+      }
     },
     "Your safe space" : {
 
