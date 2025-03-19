@@ -65,6 +65,7 @@ struct NightSkyView: View {
                         .onEnded({ value in
                             self.prevOffset = self.offset})
                 )
+                //For the zoom gesture
 //                .simultaneousGesture(
 //                    MagnifyGesture(minimumScaleDelta: 0)
 //                        .onChanged({ value in
@@ -83,4 +84,10 @@ struct NightSkyView: View {
 
 #Preview {
     NightSkyView().environmentObject(ConstellationViewModel())
+}
+
+//For adding a new language preview
+#Preview("Spanish") {
+    NightSkyView().environmentObject(ConstellationViewModel())
+        .environment(\.locale, Locale(identifier: "es"))
 }

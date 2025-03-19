@@ -12,27 +12,26 @@ import SwiftUI
 
 class PromptViewModel: ObservableObject {
     
-//    @Published
     var promptArray: [Prompt] = [
         Prompt(PromptName: "HTR"),
-        Prompt(PromptName: "Coming out"),
+        Prompt(PromptName: "Coming Out"),
         Prompt(PromptName: "Therapy"),
         Prompt(PromptName: "Sexuality"),
         Prompt(PromptName: "Gender Identity"),
         Prompt(PromptName: "Family"),
         Prompt(PromptName: "Work"),
         Prompt(PromptName: "Friends"),
-        Prompt(PromptName: "Love life"),
+        Prompt(PromptName: "Love Life"),
         Prompt(PromptName: "Shopping"),
-        Prompt(PromptName: "Media representation"),
+        Prompt(PromptName: "Media Representation"),
         Prompt(PromptName: "Clubbing"),
-        Prompt(PromptName: "Trans community"),
+        Prompt(PromptName: "Trans Community"),
         Prompt(PromptName: "Surgery"),
-        Prompt(PromptName: "Body dysmorphia"),
+        Prompt(PromptName: "Body Dysmorphia"),
         Prompt(PromptName: "ID Change"),
         Prompt(PromptName: "Religion"),
         Prompt(PromptName: "Activism"),
-        Prompt(PromptName: "Gender euphoria"),
+        Prompt(PromptName: "Gender Euphoria"),
         Prompt(PromptName: "Education")
         
     ]
