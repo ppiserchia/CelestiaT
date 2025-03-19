@@ -163,6 +163,13 @@ Just as you are.
         .environment(ConstellationViewModel())
 }
 
+
+#Preview("Italian") {
+    OnBoardingView()
+        .environment(\.locale, Locale(identifier: "it"))
+        .environment(ConstellationViewModel())
+}
+
 #Preview("Spanish") {
     OnBoardingView()
         .environment(\.locale, Locale(identifier: "es"))

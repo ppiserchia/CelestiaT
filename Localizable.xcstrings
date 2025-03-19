@@ -2,7 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "shouldTranslate" : false
     },
     "Activism" : {
       "localizations" : {
@@ -154,6 +154,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Explora constelaciones"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esplora le costellazioni"
           }
         }
       }
@@ -399,7 +405,20 @@
       }
     },
     "Just as you are." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Así como eres tú."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "così come lo sei tu."
+          }
+        }
+      }
     },
     "Love Life" : {
       "localizations" : {
@@ -419,6 +438,12 @@
     },
     "Media Representation" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Representación mediática"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -496,7 +521,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inicio"
+            "value" : "Empieza"
           }
         },
         "it" : {
@@ -540,7 +565,20 @@
       }
     },
     "They are made up\nof unique stories" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Están compuestas\nde historias únicas"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "create da storie uniche"
+          }
+        }
+      }
     },
     "Trans Community" : {
       "localizations" : {
@@ -559,10 +597,36 @@
       }
     },
     "Whenever\nyou want," : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuándo\nquieras,"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quando vuoi,"
+          }
+        }
+      }
     },
     "wherever \nyou want." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dónde\nquieras."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dove vuoi."
+          }
+        }
+      }
     },
     "Work" : {
       "localizations" : {
@@ -581,7 +645,20 @@
       }
     },
     "Your safe space" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu espacio seguro"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tuo spazio sicuro"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
