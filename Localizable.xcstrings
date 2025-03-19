@@ -56,12 +56,6 @@
     },
     "Coming Out" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Salir del Closet"
-          }
-        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -101,14 +95,7 @@
       }
     },
     "Explore constellations" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Explora constelaciones"
-          }
-        }
-      }
+
     },
     "Family" : {
       "localizations" : {
