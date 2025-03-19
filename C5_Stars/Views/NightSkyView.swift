@@ -86,8 +86,14 @@ struct NightSkyView: View {
     NightSkyView().environmentObject(ConstellationViewModel())
 }
 
-//For adding a new language preview
+// We instantiate a Preview specifically for Spanish, then we inject the Locale Spanish string catalog via the environment modifier, with its identifier (in this case, is "es").
 #Preview("Spanish") {
     NightSkyView().environmentObject(ConstellationViewModel())
         .environment(\.locale, Locale(identifier: "es"))
+}
+
+// We instantiate a Preview specifically for Italian, then we inject the Locale Italian string catalog via the environment modifier, with its identifier (in this case, is "it").
+#Preview("Italian") {
+    NightSkyView().environmentObject(ConstellationViewModel())
+        .environment(\.locale, Locale(identifier: "it"))
 }
