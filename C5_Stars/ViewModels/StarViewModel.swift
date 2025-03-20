@@ -96,4 +96,14 @@ class StarViewModel: ObservableObject {
 
     ]
     
+    var gabriConstellation: [StarModel] = [
+        StarModel(starPrompt: Prompt(PromptName: "Friends"),
+                  user: "Gabri",
+                  starStory: "For me, the term friendship is like saying, ''I help you recognise yourself and recognize parts of me in you and vice versa, I can't promise that everything I'll show you will like it, but don't be afraid, if you're scared, and I can promise this, I will take you by my hand.'' "),
+        
+        StarModel(starPrompt: Prompt(PromptName: "HRT"),
+                  user: "Gabri",
+                  starStory: "Maybe as a synonym I would associate the word ''restitution''. Hormone therapy brought me back to myself. I now recognize the reflection that the mirror sends back to me, it is a reflection from which I no longer run away or look at it timidly (and fearfully) out of the corner of my eye, but in which (today) I like to glimpse what was once only a shadow, an abstract image."),
+        
+    ]
 }

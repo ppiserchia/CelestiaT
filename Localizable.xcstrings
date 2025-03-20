@@ -212,6 +212,22 @@
         }
       }
     },
+    "For me, the term friendship is like saying, ''I help you recognise yourself and recognize parts of me in you and vice versa, I can't promise that everything I'll show you will like it, but don't be afraid, if you're scared, and I can promise this, I will take you by my hand.'' " : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para mí, el término amistad es como decir: ''Te ayudo a reconocerte y a reconocer partes de mí en ti y viceversa, no puedo prometerte que todo lo que te enseñaré te gustará, pero no tengas miedo, si tienes miedo, y puedo prometértelo, te llevaré de mi mano''. "
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per me il termine amicizia è come dirsi: ‘’ti aiuto a riconoscerti e a riconoscere in te parti di me e viceversa, non posso prometterti che tutto ciò che ti mostrerò ti piacerà, ma non temere, se hai paura, e questo posso prometterlo, ti prenderò per la mano’’."
+          }
+        }
+      }
+    },
     "Friends" : {
       "localizations" : {
         "es" : {
@@ -432,6 +448,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vita Amorosa"
+          }
+        }
+      }
+    },
+    "Maybe as a synonym I would associate the word ''restitution''. Hormone therapy brought me back to myself. I now recognize the reflection that the mirror sends back to me, it is a reflection from which I no longer run away or look at it timidly (and fearfully) out of the corner of my eye, but in which (today) I like to glimpse what was once only a shadow, an abstract image." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para mí, el sinónimo sería la palabra «restitución». La terapia hormonal me devolvió a mí mismo. Ahora reconozco el reflejo que me devuelve el espejo, es un reflejo del que ya no huyo ni lo miro tímidamente (y con miedo) por el rabillo del ojo, sino en el que (hoy) me gusta entrever lo que antes era sólo una sombra, una imagen abstracta."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forse come sinonimo assocerei la parola \"restituzione\". \nLa terapia ormonale mi ha restituito me stesso. Il riflesso che mi rimanda lo specchio ora lo riconosco, è un riflesso da cui non scappo più o guardo timidamente (e con timore) con la coda dell'occhio, ma in cui (oggi) mi piace scorgere quello che una volta era solo un'ombra, un'immagine astratta."
           }
         }
       }
