@@ -1,11 +1,23 @@
+//
+//  ConstellationView.swift
+//  CreateAConstellation
+//
+//  Created by Gina Saviano on 03/03/25.
+//
+
 import SwiftUI
 
 struct ConstellationView: View {
+    // Remove CoreData dependency
+    // @StateObject var coreDataVM = CoreDataModelView()
+    // @State var constellations: [ConstellationEntity] = []
+    
     @State private var selectedStar: StarModel? // Tracks selected star
     @EnvironmentObject var starsVM: StarViewModel // EnvironmentObject should be the ViewModel
     @State private var stars: [CGPoint] = [] //empty array to store the positions of the stars
     
     @State var numberOfStars: Int
+    let constellationName: String // Add constellation name property
     
     var body: some View {
         GeometryReader { geometry in
@@ -15,7 +27,7 @@ struct ConstellationView: View {
                     // Generate random stars when the view appears
                     Color.clear
                         .onAppear {
-                            generateConstellation(in: geometry.size)
+                            loadOrGenerateConstellation(in: geometry.size)
                         }
                 } else {
                     drawTheConstellation(stars)
@@ -24,19 +36,30 @@ struct ConstellationView: View {
         }
     }
     
-    //MARK: - SAVE AND LOAD DATA ABOUT CONSTELLATIONS
-    //CoreData
-    
-    //MARK: - CIRCLES' METHODS
-    private func generateConstellation(in size: CGSize) {
-        stars = generateStars(in: size)
-        stars = findNearestNeighbor(points: stars)
+    //Load or generate stars using UserDefaults via PersistenceManager
+    func loadOrGenerateConstellation(in size: CGSize) {
+        // Try to find existing constellation in UserDefaults
+        if let existingConstellation = PersistenceManager.shared.getConstellation(name: constellationName) {
+            // Use existing constellation's stars
+            stars = PersistenceManager.shared.convertToCGPoints(constellation: existingConstellation)
+        } else {
+            // Generate new constellation
+            let unorderedStars = generateStars(in: size)
+            stars = findNearestNeighbor(points: unorderedStars)
+            
+            // Save new constellation with its stars to UserDefaults
+            PersistenceManager.shared.saveConstellation(
+                name: constellationName,
+                numberOfStars: numberOfStars,
+                stars: stars
+            )
+        }
     }
     
     private func generateStars(in size: CGSize) -> [CGPoint] {
         var generatedStars: [CGPoint] = []
         let minDistance: CGFloat = 40
-        
+
         while generatedStars.count < numberOfStars { //this is where we decide how many stars
             let newPoint = CGPoint(
                 x: CGFloat.random(in: 50...(size.width - 50)),
@@ -114,5 +137,6 @@ private func randomFrame() -> CGFloat {
 
 // MARK: - PREVIEW
 #Preview {
-    ConstellationView(numberOfStars: 5)
+    ConstellationView(numberOfStars: 5, constellationName: "Marco")
 }
+

@@ -29,6 +29,12 @@ class ConstellationViewModel: ObservableObject {
             constellationName: StarViewModel().criFriendConstellation[0].user,
             stars: StarViewModel().criFriendConstellation,
             starNumber: StarViewModel().criFriendConstellation.count
+        ),
+        
+        ConstellationModel(
+            constellationName: StarViewModel().gabriConstellation[0].user,
+            stars: StarViewModel().gabriConstellation,
+            starNumber: StarViewModel().gabriConstellation.count
         )
     ]
 }

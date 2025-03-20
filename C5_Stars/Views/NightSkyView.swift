@@ -35,18 +35,20 @@ struct NightSkyView: View {
                 GeometryReader { geometry in
                     ZStack {
                         //On the bottom, we'll have the nightSky background, made from a radial gradient of two hues of black
-                        RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 1000)
-                            .frame(width: geometry.size.width * 10, height: geometry.size.height * 10)
+                        RadialGradient(colors: [Color("NightSkyBlackCenter"), Color("NightSkyBlackOuter")], center: .center, startRadius: 30, endRadius: 2000)
+                            .frame(width: geometry.size.width * 20, height: geometry.size.height * 20)
                             .ignoresSafeArea()
                         
                         //where we render the constellations
                             //HStack embbeded in a VSTack for getting spacing both horizontal and vertical spacing
                         VStack(spacing: 50){
-                            HStack(spacing: 50){
+                            HStack(spacing: 200){
                                 ForEach(constellationVM.constellationArray){ constellation in
                                     NightSkyViewWithZoom(numberOfStarsNightZoom: constellation.starNumber, constellationNightSkyWithZoomTitle: constellation.constellationName, stars: constellation.stars)
+                                    
                                 }
-                                .frame(width: 300, height: 500)
+                                .frame(width: 400, height: 500)
+                                
                             }
                         }
  
@@ -65,20 +67,20 @@ struct NightSkyView: View {
                         .onEnded({ value in
                             self.prevOffset = self.offset})
                 )
-                //For the zoom gesture
-//                .simultaneousGesture(
-//                    MagnifyGesture(minimumScaleDelta: 0)
-//                        .onChanged({ value in
-//                            self.scale = self.prevScale * value.magnification
-//                        })
-//                        .onEnded( { value in
-//                            self.prevScale = self.scale
-//                        })        )
+//                For the zoom gesture
+                .simultaneousGesture(
+                    MagnifyGesture(minimumScaleDelta: 0)
+                        .onChanged({ value in
+                            self.scale = self.prevScale * value.magnification
+                        })
+                        .onEnded( { value in
+                            self.prevScale = self.scale
+                        })        )
     
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-    } 
+    }
 }
 
 
