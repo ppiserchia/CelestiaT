@@ -71,4 +71,4 @@ Just as real constellations are formed by stars that appear connected from our p
 *TOGETHER WE DON’T JUST BUILD TECHNOLOGY, WE FOSTER COMMUNITY.*
 
 ---
-To try the app on TestFlight: https://testflight.apple.com/join/ufA8Mt8t
+Try the app on TestFlight: https://testflight.apple.com/join/ufA8Mt8t
